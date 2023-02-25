@@ -8,8 +8,10 @@ const FilterList = () => {
   return (
     <div>
       <ul className='MainPage-Filter-list'>
-                <li className='MainPage-Filter-item'>
-                    <Accordion>
+               
+                    
+                    <Accordion defaultActiveKey={['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17']} alwaysOpen>
+                        <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='0'>
                             <Accordion.Header>
                             <p className='MainPage-Filter-item-name'>Система</p>
@@ -38,15 +40,16 @@ const FilterList = () => {
                         </li>
                     </ul> 
                             </Accordion.Body>
+                           
                         </Accordion.Item>
-                    </Accordion>
-                    
-                    
-                
-                   
-                </li>
-                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Запис відео</p>
-                     <ul className='MainPage-Filter-list-in'>
+                        <hr className='CastomHR'></hr>
+                        <Accordion.Item eventKey='1'>
+                            <Accordion.Header>
+                            <p className='MainPage-Filter-item-name'>Запис відео</p>
+    
+                            </Accordion.Header>
+                            <Accordion.Body>
+                            <ul className='MainPage-Filter-list-in'>
                         <li className='MainPage-Filter-item-in'>
                             <input type="checkbox" id="video-4k" name="video-4k">
                             </input>
@@ -93,7 +96,141 @@ const FilterList = () => {
                             <label for="video-wo">Без запису відео</label>
                         </li>
                     </ul>
-                </li>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='2'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='3'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='4'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='5'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='6'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='7'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='8'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='9'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='10'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='11'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='12'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='13'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='14'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='15'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='16'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey='17'>
+                            <Accordion.Header>
+
+                            </Accordion.Header>
+                            <Accordion.Body>
+
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                    
+                    
+          
+                
                 <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Розмір сенсора</p>
 
                 </li>
