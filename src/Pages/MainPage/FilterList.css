@@ -1,0 +1,35 @@
+
+input[type = "checkbox"]{
+    accent-color: #101217;
+    margin-right: 7px;
+}
+
+.MainPage-Filter-list{
+    list-style-type:none;
+    padding-left: 2%;
+    padding-right: 2%
+}
+.MainPage-Filter-item{
+    text-align: left;
+    margin-top: 10px;
+    width: 98%;
+    font-size: 20px;
+  
+}
+.MainPage-Filter-list-in{
+    list-style-type:none;
+    padding-left: 2%;
+    padding-right: 2%
+}
+.MainPage-Filter-item-name{
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-left: 2;
+    line-height: 1.6;
+}
+.MainPage-Filter-item-in{
+    text-align: left;
+    margin-top: 8px;
+    width: 100%;
+    font-size: 15px;
+}
