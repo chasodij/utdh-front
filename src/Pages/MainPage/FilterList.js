@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./FilterList.css"
+import { Accordion } from 'react-bootstrap'
 
 const FilterList = () => {
+
+
   return (
     <div>
       <ul className='MainPage-Filter-list'>
-                <li className='MainPage-Filter-item'>Система
-                    <ul className='MainPage-Filter-list-in'>
+                <li className='MainPage-Filter-item'>
+                    <Accordion>
+                        <Accordion.Item eventKey='0'>
+                            <Accordion.Header>
+                            <p className='MainPage-Filter-item-name'>Система</p>
+                            </Accordion.Header>
+                            <Accordion.Body>
+                            <ul className='MainPage-Filter-list-in'>
                         <li className='MainPage-Filter-item-in'>
                             <input type="checkbox" id="system-wom" name="system-wom">
                             </input>
@@ -27,9 +36,16 @@ const FilterList = () => {
                             </input>
                             <label for="system-qp">Миттєвого друку</label>
                         </li>
-                    </ul>
+                    </ul> 
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                    
+                    
+                
+                   
                 </li>
-                <li className='MainPage-Filter-item'>Запис відео
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Запис відео</p>
                      <ul className='MainPage-Filter-list-in'>
                         <li className='MainPage-Filter-item-in'>
                             <input type="checkbox" id="video-4k" name="video-4k">
@@ -78,52 +94,52 @@ const FilterList = () => {
                         </li>
                     </ul>
                 </li>
-                <li className='MainPage-Filter-item'>Розмір сенсора
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Розмір сенсора</p>
 
                 </li>
-                <li className='MainPage-Filter-item'>Оптика в комплекті
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Оптика в комплекті</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Оптичний зум
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Оптичний зум</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Інтерфейс
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Інтерфейс</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Кількість активних піесклів
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Кількість активних піесклів</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Кріплення РК-дісплея
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Кріплення РК-дісплея</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Мікрофон
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Мікрофон</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Захист
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Захист</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Живлення
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Живлення</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Макроз'йомка
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Макроз'йомка</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Стабілізація
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Стабілізація</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Підтримка RAW
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Підтримка RAW</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Звук
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Звук</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Сенсорний екран
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Сенсорний екран</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Режим експозиції
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Режим експозиції</p>
                 
                 </li>
-                <li className='MainPage-Filter-item'>Діоганаль диспею
+                <li className='MainPage-Filter-item'><p className='MainPage-Filter-item-name'>Діоганаль диспею</p>
                 
                 </li>
             </ul>
