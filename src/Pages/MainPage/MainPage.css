@@ -1,6 +1,7 @@
 .MainPage {
     text-align: center;
 }
+
 .MainPage-header {
     background-color: #FFFFFF;
     display: flex;
@@ -22,10 +23,14 @@
 .MainPage-Icon{
     padding-left: 2%;
     font-size: 50px;
+    color: #000;
+    text-decoration: none;
 }
 .MainPage-ChoiceHelper {
     font-size: 30px;
     width: 150px;
+    color: #000;
+    text-decoration: none;
 }
 .MainPage-body {
     background-color: #E6E4E4;
