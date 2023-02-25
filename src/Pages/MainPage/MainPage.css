@@ -1,0 +1,46 @@
+.MainPage {
+    text-align: center;
+}
+.MainPage-header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+.MainPage-menu{
+    display: flex;
+    padding-right: 2%;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    
+}
+
+.MainPage-Icon{
+    padding-left: 2%;
+    font-size: 50px;
+}
+.MainPage-ChoiceHelper {
+    font-size: 30px;
+    width: 150px;
+}
+.MainPage-body {
+    background-color: #E6E4E4;
+    display: flex;
+    
+    width: 100%;
+}
+.MainPage-Filter{
+    width: 25%;
+    background-color: #F4F4F4;
+    border-style: solid;
+    border-width: 1px;
+    height: 100%;
+    min-width: 250px;
+}
+.MainPage-catalog{
+    width: 100%;
+}
