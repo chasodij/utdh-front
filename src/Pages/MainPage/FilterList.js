@@ -689,7 +689,7 @@ const FilterList = ({filter,setFilter}) => {
                     </Accordion>
                     
             </ul>
-            <button onClick={filter}>Фільтрувати</button>
+            <button className='MainPage_Filter_Button' onClick={filter}>ФІЛЬТРУВАТИ</button>
     </div>
   )
 }

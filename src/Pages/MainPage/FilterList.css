@@ -56,3 +56,12 @@ input[type = "checkbox"]{
     width: 100%;
     font-size: 15px;
 }
+.MainPage_Filter_Button{
+    margin-bottom: 15px;
+    background-color: #6F6F6F;
+    color: #F4F4F4;
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 13px;
+}
