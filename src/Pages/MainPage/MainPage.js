@@ -42,14 +42,16 @@ const MainPage = () => {
         sensorSize_FF: false,
         
         optica_yes: false,
-        optica_n: false,
+        optica_no: false,
         
+        Zoom_wo: false,
         Zoom_36: false,
         Zoom_20: false,
         Zoom_6: false,
         Zoom_36Up: false,
         
         interface_mj: false,
+        interface_av: false,
         interface_bt: false,
         interface_gps: false,
         interface_hdmi: false,
@@ -59,7 +61,7 @@ const MainPage = () => {
         interface_usb32: false,
         interface_usbc: false,
         interface_wf: false,
-        interface_mc_hdm: false,
+        interface_mc_hdmi: false,
         interface_mi_usb: false,
         interface_mi_hdmi: false,
         interface_nfc: false,
@@ -79,6 +81,7 @@ const MainPage = () => {
         micro_ability: false,
         micro_no: false,
 
+        protect_simple: false,
         protect_dust: false,
         protect_metal: false,
         protect_underwater: false,
@@ -111,7 +114,7 @@ const MainPage = () => {
         displaysize_3Up: false,
         displaysize_3: false
     })
-
+    console.log(filter)
   return (
     
       <div className="MainPage">

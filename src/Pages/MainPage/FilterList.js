@@ -5,6 +5,108 @@ import { Accordion } from 'react-bootstrap'
 const FilterList = ({filter,setFilter}) => {
    // defaultActiveKey={['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17']}
 
+   function filter(){
+    setFilter({
+        system_wom: document.getElementById("system_wom").checked,
+        system_wm: document.getElementById("system_wm").checked,
+        system_c: document.getElementById("system_c").checked,
+        system_qp: document.getElementById("system_qp").checked,
+        
+        video_4k: document.getElementById("video_4k").checked,
+        video_8k: document.getElementById("video_8k").checked,
+        video_6k: document.getElementById("video_6k").checked,
+        video_fh43: document.getElementById("video_fh43").checked,
+        video_fh169: document.getElementById("video_fh169").checked,
+        video_hd: document.getElementById("video_hd").checked,
+        video_uhd: document.getElementById("video_uhd").checked,
+        video_vga: document.getElementById("video_vga").checked,
+        video_wo: document.getElementById("video_wo").checked,
+        
+        sensorSize_1: document.getElementById("sensorSize_1").checked,
+        sensorSize_1_2: document.getElementById("sensorSize_1_2").checked,
+        sensorSize_131: document.getElementById("sensorSize_131").checked,
+        sensorSize_132: document.getElementById("sensorSize_132").checked,
+        sensorSize_18: document.getElementById("sensorSize_18").checked,
+        sensorSize_43: document.getElementById("sensorSize_43").checked,
+        sensorSize_asp: document.getElementById("sensorSize_asp").checked,
+        sensorSize_FF: document.getElementById("sensorSize_FF").checked,
+        
+        optica_yes: document.getElementById("optica_yes").checked,
+        optica_no: document.getElementById("optica_no").checked,
+        
+        Zoom_wo:document.getElementById("Zoom_wo").checked,
+        Zoom_36: document.getElementById("Zoom_36").checked,
+        Zoom_20: document.getElementById("Zoom_20").checked,
+        Zoom_6: document.getElementById("Zoom_6").checked,
+        Zoom_36Up: document.getElementById("Zoom_36Up").checked,
+        
+        interface_mj: document.getElementById("interface_mj").checked,
+        interface_av:document.getElementById("interface_av").checked,
+        interface_bt: document.getElementById("interface_bt").checked,
+        interface_gps: document.getElementById("interface_gps").checked,
+        interface_hdmi: document.getElementById("interface_hdmi").checked,
+        interface_mc_usb: document.getElementById("interface_mc_usb").checked,
+        interface_usb31: document.getElementById("interface_usb31").checked,
+        interface_usb31c: document.getElementById("interface_usb31c").checked,
+        interface_usb32: document.getElementById("interface_usb32").checked,
+        interface_usbc: document.getElementById("interface_usbc").checked,
+        interface_wf: document.getElementById("interface_wf").checked,
+        interface_mc_hdmi: document.getElementById("interface_mc_hdmi").checked,
+        interface_mi_usb: document.getElementById("interface_mi_usb").checked,
+        interface_mi_hdmi: document.getElementById("interface_mi_hdmi").checked,
+        interface_nfc: document.getElementById("interface_nfc").checked,
+        interface_usb: document.getElementById("interface_usb").checked,
+        interface_usb30: document.getElementById("interface_usb30").checked,
+
+        px_20: document.getElementById("px_20").checked,
+        px_12: document.getElementById("px_12").checked,
+        px_20Up: document.getElementById("px_20Up").checked,
+        px_16: document.getElementById("px_16").checked,
+
+        display_fastening_spin: document.getElementById("display_fastening_spin").checked,
+        display_fastening_nospin: document.getElementById("display_fastening_nospin").checked,
+        display_fastening_down: document.getElementById("display_fastening_down").checked,
+
+        micro_yes: document.getElementById("micro_yes").checked,
+        micro_ability: document.getElementById("micro_ability").checked,
+        micro_no: document.getElementById("micro_no").checked,
+
+        protect_simple:document.getElementById("protect_simple").checked,
+        protect_dust: document.getElementById("protect_dust").checked,
+        protect_metal: document.getElementById("protect_metal").checked,
+        protect_underwater: document.getElementById("protect_underwater").checked,
+
+        power_acum: document.getElementById("power_acum").checked,
+        power_aa: document.getElementById("power_aa").checked,
+
+        macro_no: document.getElementById("macro_no").checked,
+        macro_yes: document.getElementById("macro_yes").checked,
+
+        stable_el: document.getElementById("stable_el").checked,
+        stable_mx: document.getElementById("stable_mx").checked,
+        stable_op: document.getElementById("stable_op").checked,
+        stable_no: document.getElementById("stable_no").checked,
+
+        raw_yes: document.getElementById("raw_yes").checked,
+        raw_no: document.getElementById("raw_no").checked,
+        
+        sound_sterio: document.getElementById("sound_sterio").checked,
+        sound_no: document.getElementById("sound_no").checked,
+        sound_mono: document.getElementById("sound_mono").checked,
+
+        sensordisplay_yes: document.getElementById("sensordisplay_yes").checked,
+        sensordisplay_no: document.getElementById("sensordisplay_no").checked,
+        
+        expo_man: document.getElementById("expo_man").checked,
+        expo_auto: document.getElementById("expo_auto").checked,
+
+        displaysize_25: document.getElementById("displaysize_25").checked,
+        displaysize_3Up: document.getElementById("displaysize_3Up").checked,
+        displaysize_3: document.getElementById("displaysize_3").checked
+})
+    
+   }
+  
   return (
     <div>
       <ul className='MainPage_Filter_list'>
@@ -40,7 +142,6 @@ const FilterList = ({filter,setFilter}) => {
                         </li>
                     </ul> 
                             </Accordion.Body>
-                           
                         </Accordion.Item>
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='1'>
@@ -588,6 +689,7 @@ const FilterList = ({filter,setFilter}) => {
                     </Accordion>
                     
             </ul>
+            <button onClick={filter}>Фільтрувати</button>
     </div>
   )
 }
