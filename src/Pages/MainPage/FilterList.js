@@ -2,41 +2,41 @@ import React, { useState } from 'react'
 import "./FilterList.css"
 import { Accordion } from 'react-bootstrap'
 
-const FilterList = () => {
+const FilterList = ({filter,setFilter}) => {
    // defaultActiveKey={['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17']}
 
   return (
     <div>
-      <ul className='MainPage-Filter-list'>
+      <ul className='MainPage_Filter_list'>
                
                     
                     <Accordion  alwaysOpen>
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='0'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Система</p>
+                            <p className='MainPage_Filter_item_name'>Система</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="system-wom" name="system-wom">
+                            <ul className='MainPage_Filter_list_in'>
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="system_wom" name="system_wom">
                             </input>
-                            <label for="system-wom">Бездзеркальна</label>
+                            <label for="system_wom">Бездзеркальна</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="system-wm" name="system-wm">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="system_wm" name="system_wm">
                             </input>
-                            <label for="system-wm">Дзеркальна</label>
+                            <label for="system_wm">Дзеркальна</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="system-c" name="system-c">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="system_c" name="system_c">
                             </input>
-                            <label for="system-c">Компактна</label>
+                            <label for="system_c">Компактна</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="system-qp" name="system-qp">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="system_qp" name="system_qp">
                             </input>
-                            <label for="system-qp">Миттєвого друку</label>
+                            <label for="system_qp">Миттєвого друку</label>
                         </li>
                     </ul> 
                             </Accordion.Body>
@@ -45,55 +45,55 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='1'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Запис відео</p>
+                            <p className='MainPage_Filter_item_name'>Запис відео</p>
     
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-4k" name="video-4k">
+                            <ul className='MainPage_Filter_list_in'>
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_4k" name="video_4k">
                             </input>
-                            <label for="video-4k">4K(4096x2160)</label>
+                            <label for="video_4k">4K(4096x2160)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-8k" name="video-8k">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_8k" name="video_8k">
                             </input>
-                            <label for="video-8k">8K(7680x4320)</label>
+                            <label for="video_8k">8K(7680x4320)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-6k" name="video-6k">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_6k" name="video_6k">
                             </input>
-                            <label for="video-6k">6K(6000x3164)</label>
+                            <label for="video_6k">6K(6000x3164)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-fh43" name="video-fh43">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_fh43" name="video_fh43">
                             </input>
-                            <label for="video-fh43">FullHD(1440x1080)</label>
+                            <label for="video_fh43">FullHD(1440x1080)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-fh169" name="video-fh169">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_fh169" name="video_fh169">
                             </input>
-                            <label for="video-fh169">FullHD(1920x1080)</label>
+                            <label for="video_fh169">FullHD(1920x1080)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-hd" name="video-hd">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_hd" name="video_hd">
                             </input>
-                            <label for="video-hd">HD(1280x720)</label>
+                            <label for="video_hd">HD(1280x720)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-uhd" name="video-uhd">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_uhd" name="video_uhd">
                             </input>
-                            <label for="video-uhd">UHD 4K(3840x2160)</label>
+                            <label for="video_uhd">UHD 4K(3840x2160)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-vga" name="video-vga">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_vga" name="video_vga">
                             </input>
-                            <label for="video-vga">VGA(640x480)</label>
+                            <label for="video_vga">VGA(640x480)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="video-wo" name="video-wo">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="video_wo" name="video_wo">
                             </input>
-                            <label for="video-wo">Без запису відео</label>
+                            <label for="video_wo">Без запису відео</label>
                         </li>
                     </ul>
                             </Accordion.Body>
@@ -101,49 +101,49 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='2'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Розмір сенсора</p>
+                            <p className='MainPage_Filter_item_name'>Розмір сенсора</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-1" name="sensorSize-1">
+                            <ul className='MainPage_Filter_list_in'>
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_1" name="sensorSize_1">
                             </input>
-                            <label for="sensorSize-1">1''</label>
+                            <label for="sensorSize_1">1''</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-1-2" name="sensorSize-1-2">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_1_2" name="sensorSize_1_2">
                             </input>
-                            <label for="sensorSize-1-2">1/2.3'' та менше</label>
+                            <label for="sensorSize_1_2">1/2.3'' та менше</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-131" name="sensorSize-131">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_131" name="sensorSize_131">
                             </input>
-                            <label for="sensorSize-131">13.1x8.8 мм</label>
+                            <label for="sensorSize_131">13.1x8.8 мм</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-132" name="sensorSize-132">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_132" name="sensorSize_132">
                             </input>
-                            <label for="sensorSize-132">13.2x8.8 мм</label>
+                            <label for="sensorSize_132">13.2x8.8 мм</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-18" name="sensorSize-18">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_18" name="sensorSize_18">
                             </input>
-                            <label for="sensorSize-18">18.7x14 мм</label>
+                            <label for="sensorSize_18">18.7x14 мм</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-43" name="sensorSize-43">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_43" name="sensorSize_43">
                             </input>
-                            <label for="sensorSize-43">4/3''(17.3x13 мм)</label>
+                            <label for="sensorSize_43">4/3''(17.3x13 мм)</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-asp" name="sensorSize-asp">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_asp" name="sensorSize_asp">
                             </input>
-                            <label for="sensorSize-asp">ASP-C</label>
+                            <label for="sensorSize_asp">ASP_C</label>
                         </li>
-                        <li className='MainPage-Filter-item-in'>
-                            <input type="checkbox" id="sensorSize-FF" name="sensorSize-FF">
+                        <li className='MainPage_Filter_item_in'>
+                            <input type="checkbox" id="sensorSize_FF" name="sensorSize_FF">
                             </input>
-                            <label for="sensorSize-FF">Full Frame (35 мм)</label>
+                            <label for="sensorSize_FF">Full Frame (35 мм)</label>
                         </li>
                     </ul> 
                             </Accordion.Body>
@@ -151,19 +151,19 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='3'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Оптика в комплекті</p>
+                            <p className='MainPage_Filter_item_name'>Оптика в комплекті</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="optica-yes" name="optica-yes">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="optica_yes" name="optica_yes">
                                 </input>
-                                <label for="optica-yes">з об'єктивом(Kit)</label>
+                                <label for="optica_yes">з об'єктивом(Kit)</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="optica-no" name="optica-no">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="optica_no" name="optica_no">
                                 </input>
-                                <label for="optica-no">без об'єктива(Body)</label>
+                                <label for="optica_no">без об'єктива(Body)</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -171,34 +171,34 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='4'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Оптичний зум</p>
+                            <p className='MainPage_Filter_item_name'>Оптичний зум</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="Zoom-wo" name="Zoom-wo">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="Zoom_wo" name="Zoom_wo">
                                 </input>
-                                <label for="Zoom-wo">Без маштабування</label>
+                                <label for="Zoom_wo">Без маштабування</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="Zoom-36" name="Zoom-36">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="Zoom_36" name="Zoom_36">
                                 </input>
-                                <label for="Zoom-36">Оптичний зум 20х-36х</label>
+                                <label for="Zoom_36">Оптичний зум 20х_36х</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="Zoom-20" name="Zoom-20">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="Zoom_20" name="Zoom_20">
                                 </input>
-                                <label for="Zoom-20">Оптичний зум 6х-20х</label>
+                                <label for="Zoom_20">Оптичний зум 6х_20х</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="Zoom-6" name="Zoom-6">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="Zoom_6" name="Zoom_6">
                                 </input>
-                                <label for="Zoom-6">Оптичний зум до 6х</label>
+                                <label for="Zoom_6">Оптичний зум до 6х</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="Zoom-36Up" name="Zoom-36Up">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="Zoom_36Up" name="Zoom_36Up">
                                 </input>
-                                <label for="Zoom-36Up">Оптичний зум понад 36х</label>
+                                <label for="Zoom_36Up">Оптичний зум понад 36х</label>
                             </li>
                             </ul>
                             
@@ -207,94 +207,94 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='5'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Інтерфейс</p>
+                            <p className='MainPage_Filter_item_name'>Інтерфейс</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-mj" name="interface-mj">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_mj" name="interface_mj">
                                 </input>
-                                <label for="interface-mj">3.5 mini-jack</label>
+                                <label for="interface_mj">3.5 mini_jack</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-av" name="interface-av">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_av" name="interface_av">
                                 </input>
-                                <label for="interface-av">AV</label>
+                                <label for="interface_av">AV</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-bt" name="interface-bt">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_bt" name="interface_bt">
                                 </input>
-                                <label for="interface-bt">Bluetooth</label>
+                                <label for="interface_bt">Bluetooth</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-gps" name="interface-gps">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_gps" name="interface_gps">
                                 </input>
-                                <label for="interface-gps">GPS</label>
+                                <label for="interface_gps">GPS</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-hdmi" name="interface-hdmi">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_hdmi" name="interface_hdmi">
                                 </input>
-                                <label for="interface-hdmi">HDMI</label>
+                                <label for="interface_hdmi">HDMI</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-mc-usb" name="interface-mc-usb">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_mc_usb" name="interface_mc_usb">
                                 </input>
-                                <label for="interface-mc-usb">Micro USB</label>
+                                <label for="interface_mc_usb">Micro USB</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-usb30" name="interface-usb30">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_usb30" name="interface_usb30">
                                 </input>
-                                <label for="interface-usb30">USB 3.0</label>
+                                <label for="interface_usb30">USB 3.0</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-usb31" name="interface-usb31">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_usb31" name="interface_usb31">
                                 </input>
-                                <label for="interface-usb31">USB 3.1</label>
+                                <label for="interface_usb31">USB 3.1</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-usb31c" name="interface-usb31c">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_usb31c" name="interface_usb31c">
                                 </input>
-                                <label for="interface-usb31c">USB 3.1 Type-C</label>
+                                <label for="interface_usb31c">USB 3.1 Type_C</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-usb32" name="interface-usb32">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_usb32" name="interface_usb32">
                                 </input>
-                                <label for="interface-usb32">USB 3.2</label>
+                                <label for="interface_usb32">USB 3.2</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-usbc" name="interface-usbc">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_usbc" name="interface_usbc">
                                 </input>
-                                <label for="interface-usbc">USB Type-C</label>
+                                <label for="interface_usbc">USB Type_C</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-wf" name="interface-wf">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_wf" name="interface_wf">
                                 </input>
-                                <label for="interface-wf">Wi-Fi</label>
+                                <label for="interface_wf">Wi_Fi</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-mc-hdmi" name="interface-mc-hdmi">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_mc_hdmi" name="interface_mc_hdmi">
                                 </input>
-                                <label for="interface-mc-hdmi">micro-HDMI</label>
+                                <label for="interface_mc_hdmi">micro_HDMI</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-mi-usb" name="interface-mi-usb">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_mi_usb" name="interface_mi_usb">
                                 </input>
-                                <label for="interface-mi-usb">mini-USB</label>
+                                <label for="interface_mi_usb">mini_USB</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-mi-hdmi" name="interface-mi-hdmi">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_mi_hdmi" name="interface_mi_hdmi">
                                 </input>
-                                <label for="interface-mi-hdmi">mini-HDMI</label>
+                                <label for="interface_mi_hdmi">mini_HDMI</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-nfc" name="interface-nfc">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_nfc" name="interface_nfc">
                                 </input>
-                                <label for="interface-nfc">NFC</label>
+                                <label for="interface_nfc">NFC</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="interface-usb" name="interface-usb">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="interface_usb" name="interface_usb">
                                 </input>
-                                <label for="interface-usb">USB</label>
+                                <label for="interface_usb">USB</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -302,29 +302,29 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='6'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Кількість активних піесклів</p>
+                            <p className='MainPage_Filter_item_name'>Кількість активних піесклів</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="px-16" name="px-16">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="px_16" name="px_16">
                                 </input>
-                                <label for="px-16">12 - 16 Мп</label>
+                                <label for="px_16">12 _ 16 Мп</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="px-20" name="px-20">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="px_20" name="px_20">
                                 </input>
-                                <label for="px-20">16 - 20 Мп</label>
+                                <label for="px_20">16 _ 20 Мп</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="px-12" name="px-12">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="px_12" name="px_12">
                                 </input>
-                                <label for="px-12">До 12 Мп</label>
+                                <label for="px_12">До 12 Мп</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="px-20Up" name="px-20Up">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="px_20Up" name="px_20Up">
                                 </input>
-                                <label for="px-20Up">Понад 20 Мп</label>
+                                <label for="px_20Up">Понад 20 Мп</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -332,24 +332,24 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='7'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Кріплення РК-дісплея</p>
+                            <p className='MainPage_Filter_item_name'>Кріплення РК_дісплея</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="display-fastening-down" name="display-fastening-down">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="display_fastening_down" name="display_fastening_down">
                                 </input>
-                                <label for="display-fastening-down">Екран, шарнір знизу</label>
+                                <label for="display_fastening_down">Екран, шарнір знизу</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="display-fastening-spin" name="display-fastening-spin">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="display_fastening_spin" name="display_fastening_spin">
                                 </input>
-                                <label for="display-fastening-spin">Поворотний дисплей</label>
+                                <label for="display_fastening_spin">Поворотний дисплей</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <input type="checkbox" id="display-fastening-nospin" name="display-fastening-nospin">
+                            <li className='MainPage_Filter_item_in'>
+                                <input type="checkbox" id="display_fastening_nospin" name="display_fastening_nospin">
                                 </input>
-                                <label for="display-fastening-nospin">Фіксований дисплей</label>
+                                <label for="display_fastening_nospin">Фіксований дисплей</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -357,21 +357,21 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='8'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Мікрофон</p>
+                            <p className='MainPage_Filter_item_name'>Мікрофон</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="micro-no"><input type="checkbox" id="micro-no" name="micro-no">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="micro_no"><input type="checkbox" id="micro_no" name="micro_no">
                                 </input>Без мікрофона</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
+                            <li className='MainPage_Filter_item_in'>
                                 
-                                <label for="micro-yes"><input type="checkbox" id="micro-yes" name="micro-yes">
+                                <label for="micro_yes"><input type="checkbox" id="micro_yes" name="micro_yes">
                                 </input>Вбудований мікрофон</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="micro-ability"><input type="checkbox" id="micro-ability" name="micro-ability">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="micro_ability"><input type="checkbox" id="micro_ability" name="micro_ability">
                                 </input>Роз'єм для зовнішнього мікрофона</label>
                             </li>
                             </ul>
@@ -380,28 +380,28 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='9'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Захист</p>
+                            <p className='MainPage_Filter_item_name'>Захист</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="protect-underwater">    
-                                <input type="checkbox" id="protect-underwater" name="protect-underwater">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="protect_underwater">    
+                                <input type="checkbox" id="protect_underwater" name="protect_underwater">
                                 </input>Для підводної зйомки</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="protect-dust">    
-                                <input type="checkbox" id="protect-dust" name="protect-dust">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="protect_dust">    
+                                <input type="checkbox" id="protect_dust" name="protect_dust">
                                 </input>Пиловологозахищений</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="protect-simple">    
-                                <input type="checkbox" id="protect-simple" name="protect-simple">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="protect_simple">    
+                                <input type="checkbox" id="protect_simple" name="protect_simple">
                                 </input>Звичайний</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="protect-metal">    
-                                <input type="checkbox" id="protect-metal" name="protect-metal">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="protect_metal">    
+                                <input type="checkbox" id="protect_metal" name="protect_metal">
                                 </input>Тонкий металевий корпус</label>
                             </li>
                             </ul>
@@ -410,18 +410,18 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='10'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Живлення</p>
+                            <p className='MainPage_Filter_item_name'>Живлення</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="power-acum">
-                                <input type="checkbox" id="power-acum" name="power-acum">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="power_acum">
+                                <input type="checkbox" id="power_acum" name="power_acum">
                                 </input>Робота від акумулятора</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="power-aa">
-                                <input type="checkbox" id="power-aa" name="power-aa">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="power_aa">
+                                <input type="checkbox" id="power_aa" name="power_aa">
                                 </input>Робота від батарей АА</label>
                             </li>
                             </ul>
@@ -430,18 +430,18 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='11'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Макроз'йомка</p>
+                            <p className='MainPage_Filter_item_name'>Макроз'йомка</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="macro-yes">
-                                <input type="checkbox" id="macro-yes" name="macro-yes">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="macro_yes">
+                                <input type="checkbox" id="macro_yes" name="macro_yes">
                                 </input>З макрозйомкою</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="macro-no">
-                                <input type="checkbox" id="macro-no" name="macro-no">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="macro_no">
+                                <input type="checkbox" id="macro_no" name="macro_no">
                                 </input>Без макрозйомки</label>
                             </li>
                             </ul>
@@ -450,28 +450,28 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='12'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Стабілізація</p>
+                            <p className='MainPage_Filter_item_name'>Стабілізація</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="stable-no">
-                                <input type="checkbox" id="stable-no" name="stable-no">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="stable_no">
+                                <input type="checkbox" id="stable_no" name="stable_no">
                                 </input>Без стабілізації</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="stable-el">
-                                <input type="checkbox" id="stable-el" name="stable-el">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="stable_el">
+                                <input type="checkbox" id="stable_el" name="stable_el">
                                 </input>Електронна стабілізація</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="stable-mx">
-                                <input type="checkbox" id="stable-mx" name="stable-mx">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="stable_mx">
+                                <input type="checkbox" id="stable_mx" name="stable_mx">
                                 </input>Стабілізація зрушенням матриці</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="stable-op">
-                                <input type="checkbox" id="stable-op" name="stable-op">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="stable_op">
+                                <input type="checkbox" id="stable_op" name="stable_op">
                                 </input>Функція оптичної стабілізації</label>
                             </li>
                             </ul>
@@ -480,18 +480,18 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='13'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Підтримка RAW</p>
+                            <p className='MainPage_Filter_item_name'>Підтримка RAW</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="raw-no">
-                                <input type="checkbox" id="raw-no" name="raw-no">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="raw_no">
+                                <input type="checkbox" id="raw_no" name="raw_no">
                                 </input>Знімання тільки в JPEG</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="raw-yes">
-                                <input type="checkbox" id="raw-yes" name="raw-yes">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="raw_yes">
+                                <input type="checkbox" id="raw_yes" name="raw_yes">
                                 </input>Знімання в RAW і JPEG</label>
                             </li>
                             </ul>
@@ -500,23 +500,23 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='14'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Звук</p>
+                            <p className='MainPage_Filter_item_name'>Звук</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="sound-mono">
-                                <input type="checkbox" id="sound-mono" name="sound-mono">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="sound_mono">
+                                <input type="checkbox" id="sound_mono" name="sound_mono">
                                 </input>Вихід моно</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="sound-sterio">
-                                <input type="checkbox" id="sound-sterio" name="sound-sterio">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="sound_sterio">
+                                <input type="checkbox" id="sound_sterio" name="sound_sterio">
                                 </input>Вихід стеріо</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="sound-no">
-                                <input type="checkbox" id="sound-no" name="sound-no">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="sound_no">
+                                <input type="checkbox" id="sound_no" name="sound_no">
                                 </input>Немає</label>
                             </li>
                             </ul>
@@ -525,18 +525,18 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='15'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Сенсорний екран</p>
+                            <p className='MainPage_Filter_item_name'>Сенсорний екран</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="sensordisplay-no">
-                                <input type="checkbox" id="sensordisplay-no" name="sensordisplay-no">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="sensordisplay_no">
+                                <input type="checkbox" id="sensordisplay_no" name="sensordisplay_no">
                                 </input>Без сенсорного керування</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="sensordisplay-yes">
-                                <input type="checkbox" id="sensordisplay-yes" name="sensordisplay-yes">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="sensordisplay_yes">
+                                <input type="checkbox" id="sensordisplay_yes" name="sensordisplay_yes">
                                 </input>Із сенсорним управлінням</label>
                             </li>
                             </ul>
@@ -545,16 +545,16 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='16'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Режим експозиції</p>
+                            <p className='MainPage_Filter_item_name'>Режим експозиції</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="expo-man"><input type="checkbox" id="expo-man" name="expo-man">
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="expo_man"><input type="checkbox" id="expo_man" name="expo_man">
                                 </input>Є ручні режими (P, A, S, M)</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="expo-auto"><input type="checkbox" id="expo-auto" name="expo-auto">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="expo_auto"><input type="checkbox" id="expo_auto" name="expo_auto">
                                 </input>Автоматичні та сценічні режими  </label>
                             </li>
                             </ul>
@@ -563,23 +563,23 @@ const FilterList = () => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='17'>
                             <Accordion.Header>
-                            <p className='MainPage-Filter-item-name'>Діоганаль диспею</p>
+                            <p className='MainPage_Filter_item_name'>Діоганаль диспею</p>
                             </Accordion.Header>
                             <Accordion.Body>
-                            <ul className='MainPage-Filter-list-in'>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="displaysize-3">
-                                <input type="checkbox" id="displaysize-3" name="displaysize-3">
-                                </input>2.5"-3"</label>
+                            <ul className='MainPage_Filter_list_in'>
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="displaysize_3">
+                                <input type="checkbox" id="displaysize_3" name="displaysize_3">
+                                </input>2.5"_3"</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="displaysize-25">
-                                <input type="checkbox" id="displaysize-25" name="displaysize-25">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="displaysize_25">
+                                <input type="checkbox" id="displaysize_25" name="displaysize_25">
                                 </input>До 2.5"</label>
                             </li>
-                            <li className='MainPage-Filter-item-in'>
-                                <label for="displaysize-3Up">
-                                <input type="checkbox" id="displaysize-3Up" name="displaysize-3Up">
+                            <li className='MainPage_Filter_item_in'>
+                                <label for="displaysize_3Up">
+                                <input type="checkbox" id="displaysize_3Up" name="displaysize_3Up">
                                 </input>Понад 3"</label>
                             </li>
                             </ul>

@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.MainPage-header {
+.MainPage_header {
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
@@ -11,7 +11,7 @@
     height: 100px;
     width: 100%;
 }
-.MainPage-menu{
+.MainPage_menu{
     display: flex;
     padding-right: 2%;
     align-items: center;
@@ -20,35 +20,35 @@
     
 }
 
-.MainPage-Icon{
+.MainPage_Icon{
     padding-left: 2%;
     font-size: 50px;
     color: #000;
     text-decoration: none;
 }
-.MainPage-ChoiceHelper {
+.MainPage_ChoiceHelper {
     font-size: 30px;
     width: 150px;
     color: #000;
     text-decoration: none;
 }
-.MainPage-body {
+.MainPage_body {
     background-color: #E6E4E4;
     display: flex;
     
     width: 100%;
 }
-.MainPage-Filter{
+.MainPage_Filter{
     width: 25%;
     background-color: #F4F4F4;
 
     height: 100%;
     min-width: 250px;
 }
-.MainPage-Filter-text{
+.MainPage_Filter_text{
     padding-left: 2%;
     font-size: 40px;
 }
-.MainPage-catalog{
+.MainPage_catalog{
     width: 100%;
 }
