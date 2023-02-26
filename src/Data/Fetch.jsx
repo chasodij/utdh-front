@@ -14,6 +14,7 @@ export const FetchProducts = async () => {
         console.log(error);
         return error;
     }
+
 }
 
 export const FetchProduct = async (productId) => {
@@ -30,4 +31,5 @@ export const FetchProduct = async (productId) => {
         console.log(error);
         return error;
     }
+
 }
