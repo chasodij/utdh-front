@@ -114,7 +114,6 @@ const MainPage = () => {
         displaysize_3Up: false,
         displaysize_3: false
     })
-    console.log(filter)
   return (
     
       <div className="MainPage">
