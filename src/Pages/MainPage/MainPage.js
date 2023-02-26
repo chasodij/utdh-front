@@ -1,8 +1,22 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './MainPage.css';
 import FilterList from './FilterList';
+import ProductsList from "./ProductsList";
+import {FetchProducts} from "../../Data/Fetch";
 const MainPage = () => {
-    
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const getProducts = async () => {
+            const response = await FetchProducts();
+            const data = await response.json();
+            setProducts(data);
+            console.log(data);
+        }
+        getProducts()
+    }, [])
+
   return (
     
       <div className="MainPage">
@@ -28,10 +42,13 @@ const MainPage = () => {
       </header>
       <body className="MainPage-body">
         <div className='MainPage-Filter'>
+        <p className='MainPage-Filter-text'>
+            Фільтри
+        </p>
             {FilterList()}
         </div>
         <div className='MainPage-catalog'>
-
+            <ProductsList products={products}/>
         </div>
       </body>
     </div>
