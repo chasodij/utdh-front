@@ -140,7 +140,7 @@ const MainPage = () => {
         <p className='MainPage_Filter_text'>
             Фільтри
         </p>
-            {FilterList()}
+            {FilterList({filter,setFilter})}
         </div>
         <div className='MainPage_catalog'>
             <ProductsList products={products}/>
