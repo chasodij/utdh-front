@@ -22,6 +22,8 @@
     height: 150px;
     background-color: #F0F0F0;
     border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .image_buttons{
     display: flex;
@@ -29,6 +31,8 @@
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .Scales_Add_Button{
     background-color: #D9D9D9;
