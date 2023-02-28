@@ -4,6 +4,7 @@ import MainPage from './Pages/MainPage/MainPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProductPage from "./Pages/ProductPage/ProductPage";
+import ScalesPage from './Pages/ScalesPage/ScalesPage';
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
-          <Route path="/comparison" element={<></>}/>
+          <Route path="/comparison" element={<ScalesPage/>}/>
           <Route path="/product/:productId" element={<ProductPage/>}/>
         </Routes>
 
