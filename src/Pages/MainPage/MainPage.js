@@ -16,7 +16,6 @@ const MainPage = () => {
         }
         getProducts()
     }, [])
-
     const [filter, setFilter] = useState({
         system_wom: false,
         system_wm: false,
@@ -114,6 +113,7 @@ const MainPage = () => {
         displaysize_3Up: false,
         displaysize_3: false
     })
+
   return (
     
       <div className="MainPage">
