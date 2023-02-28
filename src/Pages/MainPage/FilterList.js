@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./FilterList.css"
 import { Accordion } from 'react-bootstrap'
 
 const FilterList = ({filter,setFilter}) => {
    // defaultActiveKey={['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17']}
 
-   function filter(){
+   function filtering(){
     setFilter({
         system_wom: document.getElementById("system_wom").checked,
         system_wm: document.getElementById("system_wm").checked,
@@ -689,7 +689,7 @@ const FilterList = ({filter,setFilter}) => {
                     </Accordion>
                     
             </ul>
-            <button className='MainPage_Filter_Button' onClick={filter}>ФІЛЬТРУВАТИ</button>
+            <button className='MainPage_Filter_Button' onClick={filtering}>ФІЛЬТРУВАТИ</button>
     </div>
   )
 }

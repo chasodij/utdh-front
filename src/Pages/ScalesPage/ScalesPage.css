@@ -1,0 +1,78 @@
+.Scales_bg{
+    background-color: #939090;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.Scales_center{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow_button{
+    background-color: #939090;
+    border: none;
+}
+.image_template{
+    width: 250px;
+    height: 150px;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+}
+.image_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Scales_Add_Button{
+    background-color: #D9D9D9;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+th[name='Table_first_colum']:first-child{
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px ;
+}
+th[name='Table_first_colum']:last-child{
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-right-width: 2px ;
+}
+th[name='Table_value_colum']:last-child{
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-right-width: 2px ;
+}
+table{
+    border-top-width: 2px;
+}
+
+.Table_arrow_colum{
+    width: 200px;
+    text-align: center;
+}
+.Table_value_colum{
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding-left: 10px;
+    width: 200px;
+    font-size: 17px;
+    background-color: #F0F0F0;
+}
+.Table_first_colum{
+    font-size: 17px;
+    width: 200px;
+    background-color: #F0F0F0;
+}
+.Table_colum{
+    width: 200px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    background-color: #F0F0F0;
+}
