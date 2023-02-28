@@ -4,6 +4,9 @@
     height: 100%;
     position: relative;
 }
+.arrow_back{
+    padding: 10px;
+}
 .Scales_center{
    
     display: flex;
@@ -66,6 +69,7 @@ table{
     background-color: #F0F0F0;
 }
 .Table_first_colum{
+    padding-left: 5px;
     font-size: 17px;
     width: 200px;
     background-color: #F0F0F0;

@@ -20,7 +20,7 @@ const ScalesPage = ({products}) => {
   return (
     <div className='Scales_bg'>
         <div>
-        <a href='/'>
+        <a href='/' className='arrow_back'>
                     <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12L20 12" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 6L4.0625 11.9375V11.9375C4.02798 11.972 4.02798 12.028 4.0625 12.0625V12.0625L10 18" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
