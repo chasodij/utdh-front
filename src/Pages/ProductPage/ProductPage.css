@@ -51,14 +51,13 @@
 }
 .Table_cr_first_colum{
     text-align: start;
-    width: 150px;
+    width: 300px;
     font-size: 20px;
     line-height: 20px;
     padding: 5px;
 }
 .Table_cr_value_colum{
     text-align: start;
-    width: 150px;
     font-size: 20px;
     line-height: 20px;
     padding: 5px;
