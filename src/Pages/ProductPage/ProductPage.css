@@ -1,0 +1,66 @@
+.arrow_button{
+    background-color: #E6E4E4;
+    border: none;
+}
+.CameraScreen{
+    width: 100%;
+}
+.CameraImage{
+    width: 400px;
+    height: 400px;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+}
+.CameraGeneral{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
+.CameraName{
+    font-size: 50px;
+    line-height: 50px;
+    width:500px;
+    margin-left: 20px;
+}
+.CameraPrice{
+    font-size: 60px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.AddButton{
+    border: none;
+    background-color: #E6E4E4;
+    margin-right: 30px;
+}
+.CameraButton{
+    position: absolute;
+    bottom: 20px;
+    margin-left: 20px;
+}
+.CameraCharacter{
+    display:grid;
+    justify-content: center;
+}
+.CameraCharacterAtricle{
+    font-size: 30px;
+}
+.Table_cr_first_colum{
+    text-align: start;
+    width: 150px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 5px;
+}
+.Table_cr_value_colum{
+    text-align: start;
+    width: 150px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 5px;
+    padding-left: 40px;
+}

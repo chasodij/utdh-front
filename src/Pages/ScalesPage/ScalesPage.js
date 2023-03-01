@@ -1,5 +1,6 @@
 import React from 'react'
 import "./ScalesPage.css"
+import { useNavigate} from "react-router-dom";
 
 const ScalesPage = ({products}) => {
     var iter = 0;
@@ -17,21 +18,23 @@ const ScalesPage = ({products}) => {
         }
         console.log(iter)
     }
+    let navigate = useNavigate();
   return (
+    
     <div className='Scales_bg'>
         <div>
-        <a href='/'>
+        <button onClick={() => navigate(-1)} className='zero_button'>
                     <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12L20 12" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 6L4.0625 11.9375V11.9375C4.02798 11.972 4.02798 12.028 4.0625 12.0625V12.0625L10 18" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                    </a>
+                </button>
         </div>
        <div className='Scales_center'>
         <table name='ScalesTable'>
             <tr>
                 <th className='Table_arrow_colum'>
-                    <button className='arrow_button' onClick={iterDown}>
+                    <button className='zero_button' onClick={iterDown}>
                     <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.1" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="#323232"/>
                     <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#323232" stroke-width="2"/>
@@ -48,18 +51,52 @@ const ScalesPage = ({products}) => {
                     <button className='Scales_Add_Button'>
                         Додати в кошик
                     </button>
-                    <a>
+                    <button className='zero_button'>
                     <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    </a>
+                    </button>
+                    
+                    </div>
+                    </div>
+                
+                </th>
+                <th>
+                    <div>
+                    <div className='image_template'></div>
+                    <div className='image_buttons'>
+                    <button className='Scales_Add_Button'>
+                        Додати в кошик
+                    </button>
+                    <button className='zero_button'>
+                    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                    
+                    </div>
+                    </div>
+                
+                </th>
+                <th>
+                    <div>
+                    <div className='image_template'></div>
+                    <div className='image_buttons'>
+                    <button className='Scales_Add_Button'>
+                        Додати в кошик
+                    </button>
+                    <button className='zero_button'>
+                    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8L8 16M8.00001 8L16 16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
                     
                     </div>
                     </div>
                 
                 </th>
                 <th className='Table_arrow_colum'>
-                <button className='arrow_button' onClick={iterUp}>
+                <button className='zero_button' onClick={iterUp}>
                 <svg  width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.1" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="#323232"/>
 <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#323232" stroke-width="2"/>
@@ -77,10 +114,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                     Система
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -93,10 +142,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                     Розмір сенсора
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -110,10 +171,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                     Оптичний зум
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -126,10 +199,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                 Кількість активних піесклів
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -142,10 +227,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                 Мікрофон
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -158,10 +255,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                 Живлення
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -174,10 +283,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                 Стабілізація
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -190,10 +311,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                 Звук
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -206,6 +339,12 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
@@ -214,10 +353,22 @@ const ScalesPage = ({products}) => {
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
                 </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
                 Діоганаль диспею
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
+                </th>
+                <th className='Table_value_colum' name='Table_value_colum'>
+                    sdsds
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds

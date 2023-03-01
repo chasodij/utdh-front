@@ -4,13 +4,16 @@
     height: 100%;
     position: relative;
 }
+.arrow_back{
+    padding: 10px;
+}
 .Scales_center{
    
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.arrow_button{
+.zero_button{
     background-color: #939090;
     border: none;
 }
@@ -19,6 +22,8 @@
     height: 150px;
     background-color: #F0F0F0;
     border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .image_buttons{
     display: flex;
@@ -26,6 +31,8 @@
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .Scales_Add_Button{
     background-color: #D9D9D9;
@@ -66,6 +73,7 @@ table{
     background-color: #F0F0F0;
 }
 .Table_first_colum{
+    padding-left: 5px;
     font-size: 17px;
     width: 200px;
     background-color: #F0F0F0;
