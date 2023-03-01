@@ -42,3 +42,25 @@
     bottom: 20px;
     margin-left: 20px;
 }
+.CameraCharacter{
+    display:grid;
+    justify-content: center;
+}
+.CameraCharacterAtricle{
+    font-size: 30px;
+}
+.Table_cr_first_colum{
+    text-align: start;
+    width: 150px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 5px;
+}
+.Table_cr_value_colum{
+    text-align: start;
+    width: 150px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 5px;
+    padding-left: 40px;
+}

@@ -80,10 +80,158 @@ const ProductPage = () => {
             </div>
             <div className='CameraCharacter'>
                 <div className='CameraCharacterAtricle'>
-                    <table>
-
-                    </table>
+                    Характеристики
                 </div>
+                <table name='CharacterTable'>
+           
+         
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+                   Система
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+                   Запис відео
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+                   Розмір сенсора
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+               
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+                   Оптика в комплекті
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+                   Оптичний зум
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+                   Інтерфейс
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Кількість активних піесклів
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Кріплення РК-дісплея
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Мікрофон
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Захист
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Живлення
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Макроз'йомка
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Стабілізація
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Підтримка RAW
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Звук
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Сенсорний екран
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Режим експозиції
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           <tr>
+               <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
+               Діоганаль диспею
+               </th>
+              <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
+                   sdsds
+               </th>
+           </tr>
+           
+       </table>
             </div>
         </div>
         </body>
