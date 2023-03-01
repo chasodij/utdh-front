@@ -394,9 +394,9 @@ const ScalesPage = ({products}) => {
                     sdsds
                 </th>
             </tr>
-            
+            <br/>
         </table>
-        <br></br>
+        
       </div>
     </div>
   )
