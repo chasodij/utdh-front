@@ -23,10 +23,12 @@ function App() {
     }
 
     const addToComparison = (product) => {
+        console.log(scales)
         if (scales.find(item => item === product)) {
             return;
         }
         setScales([...scales, product]);
+        console.log(scales)
     }
 
     return (
