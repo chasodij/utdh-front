@@ -3,7 +3,7 @@ import './MainPage.css';
 import FilterList from './FilterList';
 import ProductsList from "./ProductsList";
 import {FetchProducts} from "../../Data/Fetch";
-const MainPage = ({bucket, setBucket, scales, setScales}) => {
+const MainPage = ({bucket, addToBucket, addToComparison}) => {
 
     const [products, setProducts] = useState([]);
 
@@ -144,7 +144,7 @@ const MainPage = ({bucket, setBucket, scales, setScales}) => {
             {FilterList({filter,setFilter})}
         </div>
         <div className='MainPage_catalog'>
-            <ProductsList bucket={bucket} scales={scales} setScales={setScales} setBucket={setBucket} products={products}/>
+            <ProductsList bucket={bucket} addToComparison={addToComparison} addToBucket={addToBucket} products={products}/>
         </div>
       </body>
     </div>

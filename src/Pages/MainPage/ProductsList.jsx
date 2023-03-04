@@ -1,11 +1,11 @@
 import React from 'react';
 import ProductCard from "./ProductCard";
 
-const ProductsList = ({products, setBucket, setScales, bucket, scales}) => {
+const ProductsList = ({products, bucket, addToBucket, addToComparison}) => {
     return (
         <div className='products-wrapper'>
             {products.map((product) => (
-                <ProductCard bucket={bucket} scales={scales} setBucket={setBucket} setScales={setScales} product={product}/>
+                <ProductCard bucket={bucket} addToBucket={addToBucket} addToComparison={addToComparison} product={product}/>
             ))}
         </div>
     );
