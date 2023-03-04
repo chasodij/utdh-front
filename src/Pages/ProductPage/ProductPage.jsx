@@ -4,7 +4,7 @@ import {FetchProduct} from "../../Data/Fetch";
 import "./ProductPage.css"
 import { useNavigate} from "react-router-dom";
 
-const ProductPage = () => {
+const ProductPage = ({bucket, setBucket, scales, setScales}) => {
 
     const {productId} = useParams();
 
