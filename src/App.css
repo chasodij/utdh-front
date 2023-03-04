@@ -45,6 +45,7 @@ body > #root > div {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 3%;
+    align-items: center;
 }
 .product-more-button{
     text-decoration: none;
@@ -61,4 +62,10 @@ body > #root > div {
     font-size: 32px;
     font-weight: 500;
     font-family: "Oswald", sans-serif;
+}
+
+.icon{
+    font-size: 22px;
+    color: #5c80d8;
+    cursor: pointer;
 }

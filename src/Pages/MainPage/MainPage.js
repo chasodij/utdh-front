@@ -144,7 +144,7 @@ const MainPage = ({bucket, setBucket, scales, setScales}) => {
             {FilterList({filter,setFilter})}
         </div>
         <div className='MainPage_catalog'>
-            <ProductsList products={products}/>
+            <ProductsList bucket={bucket} scales={scales} setScales={setScales} setBucket={setBucket} products={products}/>
         </div>
       </body>
     </div>
