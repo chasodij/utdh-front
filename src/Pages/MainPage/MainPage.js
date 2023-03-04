@@ -3,7 +3,7 @@ import './MainPage.css';
 import FilterList from './FilterList';
 import ProductsList from "./ProductsList";
 import {FetchProducts} from "../../Data/Fetch";
-const MainPage = () => {
+const MainPage = ({bucket, setBucket, scales, setScales}) => {
 
     const [products, setProducts] = useState([]);
 

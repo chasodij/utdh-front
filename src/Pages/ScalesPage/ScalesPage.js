@@ -2,11 +2,11 @@ import React from 'react'
 import "./ScalesPage.css"
 import { useNavigate} from "react-router-dom";
 
-const ScalesPage = ({products}) => {
+const ScalesPage = ({bucket, setBucket, scales, setScales}) => {
     var iter = 0;
     function iterUp(){
         //products замінити на products.lenght - 2
-        if(iter !== products){
+        if(iter !== scales){
             iter++;
         }
         console.log(iter)
