@@ -1,4 +1,3 @@
-
 import './App.css';
 import MainPage from './Pages/MainPage/MainPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -7,6 +6,8 @@ import ProductPage from "./Pages/ProductPage/ProductPage";
 import ScalesPage from './Pages/ScalesPage/ScalesPage';
 import {useEffect, useState} from "react";
 import ScalePageVersion2 from "./Pages/ScalesPage/ScalePageVersion2";
+import 'react-toastify/dist/ReactToastify.css';
+import {toast, ToastContainer} from "react-toastify";
 
 function App() {
   
@@ -17,18 +18,25 @@ function App() {
 
     const addToCart = (product) => {
         if (bucket.find(item => item.id === product.id)) {
+            const notify = () => toast.error('Товар уже добавлен в корзину')
+            notify()
             return;
         }
         setBucket([...bucket, product]);
+        const notify = () => toast("Added to cart!");
+        notify();
     }
 
     const addToComparison = (product) => {
-        console.log(scales)
         if (scales.find(item => item === product)) {
+            const notify = () => toast.error('Товар уже добавлен в сравнение')
+            notify()
             return;
         }
+
         setScales([...scales, product]);
-        console.log(scales)
+        const notify = () => toast("Added to comparison!");
+        notify();
     }
 
     return (
@@ -38,7 +46,18 @@ function App() {
           <Route path="/comparison" element={<ScalePageVersion2 bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart} scales={scales}/>}/>
           <Route path="/product/:productId" element={<ProductPage bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart} scales={scales}/>}/>
         </Routes>
-
+          <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss={false}
+              draggable
+              pauseOnHover
+              theme={"dark"}
+          />
       </BrowserRouter>
   );
 }

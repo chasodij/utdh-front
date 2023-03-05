@@ -58,6 +58,11 @@ body > #root > div {
     font-family: "Oswald", sans-serif;
     color: white;
 }
+.product-more-button:hover{
+    background: #183781;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
 .product-price{
     font-size: 32px;
     font-weight: 500;
@@ -68,4 +73,31 @@ body > #root > div {
     font-size: 22px;
     color: #5c80d8;
     cursor: pointer;
+}
+.icon:hover{
+    color: #183781;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.comparison-camera-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2%;
+    align-items: center;
+}
+.comparison-products-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 2%;
+}
+.comparison-camera-image{
+    width: 300px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
