@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <--
+import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import {Link} from "react-router-dom"; // <--
 
 const ProductCard = ({product, bucket, addToBucket, addToComparison}) => {
 
@@ -19,13 +20,11 @@ const ProductCard = ({product, bucket, addToBucket, addToComparison}) => {
                 <FontAwesomeIcon onClick={() => addToComparison(product.id)} className={'icon'} icon={solid('scale-balanced')} />
             </div>
             <div className='product-flex-wrapper-div'>
-                <button className='product-more-button'>
+                <Link className='product-more-button' to={`/product/${product.id}`}>
                     More
-                </button>
+                </Link>
                 <FontAwesomeIcon onClick={() => addToBucket(product)} className={'icon'}  icon={solid('bucket')} />
             </div>
-
-
         </div>
 
     );

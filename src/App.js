@@ -18,6 +18,8 @@ function App() {
 
     const addToCart = (product) => {
         if (bucket.find(item => item.id === product.id)) {
+            const notify = () => toast.error('Товар уже добавлен в корзину')
+            notify()
             return;
         }
         setBucket([...bucket, product]);
@@ -27,6 +29,8 @@ function App() {
 
     const addToComparison = (product) => {
         if (scales.find(item => item === product)) {
+            const notify = () => toast.error('Товар уже добавлен в сравнение')
+            notify()
             return;
         }
 
