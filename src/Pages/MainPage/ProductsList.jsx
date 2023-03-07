@@ -6,7 +6,7 @@ const ProductsList = ({products, bucket, addToBucket, addToComparison}) => {
         <div className='products-wrapper'>
             {products ? products.map((product) => (
                 <ProductCard bucket={bucket} addToBucket={addToBucket} addToComparison={addToComparison} product={product}/>
-            ))}
+            )) : ""}
         </div>
     );
 };
