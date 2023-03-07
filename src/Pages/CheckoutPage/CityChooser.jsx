@@ -1,19 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import "./Chooser.css"
+import "./Chooser.css";
 
-const CityChooser = () => {
-  const [city, setCity] = useState({
-    value: "",
-    ref: "",
-    isValid: false,
-    validityMessage: "",
-  });
+const CityChooser = (props) => {
   const [cities, setCities] = useState([]);
   const [areCitiesShown, setAreCitiesShown] = useState(false);
   const inputRef = useRef(null);
 
   const getCities = useCallback(() => {
-    if (city.value.length < 3 || city.isValid) {
+    if (props.cityValue.length < 3 || props.isCityValid) {
       hideSuggestedCities();
       return;
     }
@@ -25,7 +19,7 @@ const CityChooser = () => {
         modelName: "Address",
         calledMethod: "searchSettlements",
         methodProperties: {
-          CityName: city.value,
+          CityName: props.cityValue,
           Limit: "50",
           Page: "1",
         },
@@ -40,7 +34,7 @@ const CityChooser = () => {
         setCities(cities.data[0].Addresses);
         showSuggestedCities();
       });
-  }, [city]);
+  }, [props.cityValue, props.isCityValid]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
@@ -49,7 +43,7 @@ const CityChooser = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [city.value, getCities]);
+  }, [props.cityValue, getCities]);
 
   const cityKeyDownHandler = (event) => {
     if (event.key === "Enter") {
@@ -58,20 +52,17 @@ const CityChooser = () => {
   };
 
   const changeCityHandler = (event) => {
-    setCity({
-      value: event.target.value,
-      isValid: false,
-      validityMessage: "Будь ласка, оберіть місто доставки.",
-    });
+    props.setCityCallback(event.target.value, "", false);
+
+    inputRef.current.setCustomValidity("Будь ласка, оберіть місто доставки.");
   };
 
   const selectCityFromListHandler = (event) => {
-    setCity({
-      value: event.target.textContent,
-      ref: event.target.getAttribute("data-value"),
-      isValid: true,
-      validityMessage: "",
-    });
+    props.setCityCallback(
+      event.target.textContent,
+      event.target.getAttribute("data-value"),
+      true
+    );
 
     inputRef.current.setCustomValidity("");
 
@@ -83,8 +74,8 @@ const CityChooser = () => {
   };
 
   const hideSuggestedCities = (event) => {
-    if(event && event.relatedTarget && event.relatedTarget.tagName === "UL"){
-        return;
+    if (event && event.relatedTarget && event.relatedTarget.tagName === "UL") {
+      return;
     }
     setAreCitiesShown(false);
   };
@@ -101,7 +92,7 @@ const CityChooser = () => {
         onChange={changeCityHandler}
         onKeyDown={cityKeyDownHandler}
         onFocus={getCities}
-        value={city.value}
+        value={props.cityValue}
         required
       />
       <ul
@@ -121,7 +112,7 @@ const CityChooser = () => {
         ))}
       </ul>
       <div className="invalid-feedback" id="city-feedback">
-        {city.validityMessage}
+        {props.isCityValid ? "" : "Будь ласка, оберіть місто доставки."}
       </div>
     </div>
   );

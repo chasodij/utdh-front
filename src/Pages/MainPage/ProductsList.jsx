@@ -4,9 +4,9 @@ import ProductCard from "./ProductCard";
 const ProductsList = ({products}) => {
     return (
         <div className='products-wrapper'>
-            {products.map((product) => (
+            {products ? products.map((product) => (
                 <ProductCard product={product}/>
-            ))}
+            )) : ""}
         </div>
     );
 };

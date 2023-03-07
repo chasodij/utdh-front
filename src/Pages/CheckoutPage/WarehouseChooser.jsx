@@ -1,47 +1,24 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import "./Chooser.css"
+import "./Chooser.css";
 
 const WarehouseChooser = (props) => {
-  const [warehouse, setWarehouse] = useState({
-    value: "",
-    ref: "",
-    isValid: false,
-    validityMessage: "",
-  });
   const [warehouses, setWarehouses] = useState([]);
-  const [areWarehousesShown, setAreWarehousesShown] = useState(false);
+  const [isListShown, setIsListShown] = useState(false);
   const inputRef = useRef(0);
 
-  // componentDidUpdate(prevProps, prevState, snapshot) {
-  //     if(prevProps !== this.props){
-  //         this.setState({active: this.props.active, cityRef: this.props.cityRef});
-  //         if(!this.props.active){
-  //             this.setState({warehouse: "", warehouseRef: "", isWarehouseValid: false, warehouses: []});
-  //             document.getElementById("warehouse").value = "";
-  //         }
-  //     }
-  //     else if(prevState.warehouse !== this.state.warehouse || prevState.warehouseRef !== this.state.warehouseRef || prevState.isWarehouseValid !== this.state.isWarehouseValid){
-  //         this.props.updateParentStateCallback(this.state.warehouse, this.state.warehouseRef, this.state.isWarehouseValid);
-  //     }
-  //     if(prevState.warehouse !== this.state.warehouse){
-  //         this.handleWarehouseRequest();
-  //     }
-
-  // }
-
   const getWarehouses = useCallback(() => {
-    if (!props.active || warehouse.isValid) {
+    if (!props.active || props.isWarehouseValid) {
       hideSuggestedWarehouses();
       return;
     }
 
-    let properties = {
+    let methodProperties = {
       SettlementRef: props.cityRef,
       Limit: "50",
       Page: "1",
     };
-    if (warehouse.value !== "") {
-      properties.FindByString = warehouse.value;
+    if (props.warehouseValue !== "") {
+      methodProperties.FindByString = props.warehouseValue;
     }
 
     fetch("https://api.novaposhta.ua/v2.0/json/", {
@@ -50,19 +27,24 @@ const WarehouseChooser = (props) => {
         apiKey: "38ae6f0e1431cf81d4519ef08c9c2110",
         modelName: "Address",
         calledMethod: "getWarehouses",
-        methodProperties: properties,
+        methodProperties: methodProperties,
       }),
     })
       .then((response) => response.json())
       .then((warehouses) => {
         if (warehouses.data.length === 0) {
-          this.setState({ warehouses: [] });
+          setWarehouses([]);
           return;
         }
         setWarehouses(warehouses.data);
         showSuggestedWarehouses();
       });
-  }, [props.active, props.cityRef, warehouse.isValid, warehouse.value]);
+  }, [
+    props.active,
+    props.cityRef,
+    props.isWarehouseValid,
+    props.warehouseValue,
+  ]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
@@ -71,7 +53,7 @@ const WarehouseChooser = (props) => {
     return () => {
       clearTimeout(timer);
     };
-  }, [warehouse.value, getWarehouses]);
+  }, [props.warehouseValue, getWarehouses]);
 
   const warehouseKeyDownHandler = (event) => {
     if (event.key === "Enter") {
@@ -80,20 +62,19 @@ const WarehouseChooser = (props) => {
   };
 
   const changeWarehouseHandler = (event) => {
-    setWarehouse({
-      value: event.target.value,
-      isValid: false,
-      validityMessage: "Будь ласка, оберіть відділення доставки.",
-    });
+    props.setWarehouseCallback(event.target.value, false);
+
+    inputRef.current.setCustomValidity(
+      "Будь ласка, оберіть відділення доставки."
+    );
   };
 
   const selectWarehouseFromListHandler = (event) => {
-    setWarehouse({
-      warehouse: event.target.textContent,
-      ref: event.target.getAttribute("data-value"),
-      isValid: true,
-      validityMessage: "",
-    });
+    props.setWarehouseCallback(
+      event.target.textContent,
+      event.target.getAttribute("data-value"),
+      true
+    );
 
     inputRef.current.setCustomValidity("");
 
@@ -101,13 +82,13 @@ const WarehouseChooser = (props) => {
   };
 
   const hideSuggestedWarehouses = (event) => {
-    if(event && event.relatedTarget && event.relatedTarget.tagName === "UL"){
-        return;
+    if (event && event.relatedTarget && event.relatedTarget.tagName === "UL") {
+      return;
     }
-    setAreWarehousesShown(false);
+    setIsListShown(false);
   };
   const showSuggestedWarehouses = () => {
-    setAreWarehousesShown(true);
+    setIsListShown(true);
   };
 
   return (
@@ -123,11 +104,11 @@ const WarehouseChooser = (props) => {
         onChange={changeWarehouseHandler}
         onKeyDown={warehouseKeyDownHandler}
         onFocus={getWarehouses}
-        value={warehouse.value}
+        value={props.warehouseValue}
         required
       />
       <ul
-        className={`tips-list ${areWarehousesShown ? "d-block" : "d-none"}`}
+        className={`tips-list ${isListShown ? "d-block" : "d-none"}`}
         id="warehouse-suggest"
         tabIndex="0"
       >
@@ -143,7 +124,9 @@ const WarehouseChooser = (props) => {
         ))}
       </ul>
       <div className="invalid-feedback" id="warehouse-feedback">
-        {warehouse.validityMessage}
+        {props.isWarehouseValid
+          ? ""
+          : "Будь ласка, оберіть відділення доставки."}
       </div>
     </div>
   );
