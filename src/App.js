@@ -3,6 +3,7 @@ import MainPage from './Pages/MainPage/MainPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProductPage from "./Pages/ProductPage/ProductPage";
+import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 import ScalesPage from './Pages/ScalesPage/ScalesPage';
 import {useEffect, useState} from "react";
 import ScalePageVersion2 from "./Pages/ScalesPage/ScalePageVersion2";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/" element={<MainPage bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart}/>}/>
           <Route path="/comparison" element={<ScalePageVersion2 bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart} scales={scales}/>}/>
           <Route path="/product/:productId" element={<ProductPage bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart} scales={scales}/>}/>
+          <Route path="/checkout/*" element={<CheckoutPage/>}/>
         </Routes>
           <ToastContainer
               position="top-right"

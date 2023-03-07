@@ -116,7 +116,6 @@ const MainPage = ({bucket, addToBucket, addToComparison}) => {
     })
 
   return (
-    
     <div className="MainPage">
       <Header/>
       <body className="MainPage_body">
@@ -129,7 +128,7 @@ const MainPage = ({bucket, addToBucket, addToComparison}) => {
         <div className='MainPage_catalog'>
             <ProductsList bucket={bucket} addToComparison={addToComparison} addToBucket={addToBucket} products={products}/>
         </div>
-      </body>
+      </div>
     </div>
     
   )

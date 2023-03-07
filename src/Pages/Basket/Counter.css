@@ -1,0 +1,21 @@
+.counter-block:before{
+    font-size: 15px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  /*щоб при подвійному натисканні на блок не виділявся текст в лічильнику*/
+  .counter-block{
+    user-select: none;
+  }
+  svg {
+    position: relative;
+    top: -2px;
+  }
+
+  ._icon-plus:hover {
+    cursor: pointer;
+  }
+  
+  ._icon-minus:hover {
+    cursor: pointer;
+  }
