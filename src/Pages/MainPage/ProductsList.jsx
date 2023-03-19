@@ -3,8 +3,6 @@ import ProductCard from "./ProductCard";
 
 const ProductsList = ({products, bucket, addToBucket, addToComparison}) => {
 
-    
-
     return (
         <div className='products-wrapper'>
             {products ? products.map((product) => (
