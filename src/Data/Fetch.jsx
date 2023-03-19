@@ -2,7 +2,7 @@ const BASE_URL = "https://localhost:7275/";
 
 export const FetchProducts = async () => {
     try {
-        const response = await fetch(`${BASE_URL}cameras/cards`, {
+        const response = await fetch(`${BASE_URL}cameras`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
