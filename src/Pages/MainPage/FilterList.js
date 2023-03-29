@@ -5,7 +5,111 @@ import { Accordion } from 'react-bootstrap'
 const FilterList = ({ filter, setFilter }) => {
   // defaultActiveKey={['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17']}
   
+
+   function resetFilter(){
+     document.getElementById("system_wom").checked = false;
+     document.getElementById("system_wm").checked = false;
+     document.getElementById("system_c").checked = false;
+     document.getElementById("system_qp").checked = false;
+
+     document.getElementById("video_4k").checked = false;
+     document.getElementById("video_8k").checked = false;
+     document.getElementById("video_6k").checked = false;
+     document.getElementById("video_fh43").checked = false;
+     document.getElementById("video_fh169").checked = false;
+     document.getElementById("video_hd").checked = false;
+     document.getElementById("video_uhd").checked = false;
+     document.getElementById("video_vga").checked = false;
+     document.getElementById("video_wo").checked = false;
+
+     document.getElementById("sensorSize_1").checked = false;
+     document.getElementById("sensorSize_1_2").checked = false;
+     document.getElementById("sensorSize_131").checked = false;
+     document.getElementById("sensorSize_132").checked = false;
+     document.getElementById("sensorSize_18").checked = false;
+     document.getElementById("sensorSize_43").checked = false;
+     document.getElementById("sensorSize_asp").checked = false;
+     document.getElementById("sensorSize_FF").checked = false;
+
+     document.getElementById("optica_yes").checked = false;
+     document.getElementById("optica_no").checked = false;
+
+     document.getElementById("Zoom_wo").checked = false;
+     document.getElementById("Zoom_36").checked = false;
+     document.getElementById("Zoom_20").checked = false;
+     document.getElementById("Zoom_6").checked = false;
+     document.getElementById("Zoom_36Up").checked = false;
+
+     document.getElementById("interface_mj").checked = false;
+     document.getElementById("interface_av").checked = false;
+     document.getElementById("interface_bt").checked = false;
+     document.getElementById("interface_gps").checked = false;
+     document.getElementById("interface_hdmi").checked = false;
+     document.getElementById("interface_mc_usb").checked = false;
+     document.getElementById("interface_usb31").checked = false;
+     document.getElementById("interface_usb31c").checked = false;
+     document.getElementById("interface_usb32").checked = false;
+     document.getElementById("interface_usbc").checked = false;
+     document.getElementById("interface_wf").checked = false;
+     document.getElementById("interface_mc_hdmi").checked = false;
+     document.getElementById("interface_mi_usb").checked = false;
+     document.getElementById("interface_mi_hdmi").checked = false;
+     document.getElementById("interface_nfc").checked = false;
+     document.getElementById("interface_usb").checked = false;
+     document.getElementById("interface_usb30").checked = false;
+
+     document.getElementById("px_20").checked = false;
+     document.getElementById("px_12").checked = false;
+     document.getElementById("px_20Up").checked = false;
+     document.getElementById("px_16").checked = false;
+
+     document.getElementById("display_fastening_spin").checked = false;
+     document.getElementById("display_fastening_nospin").checked = false;
+     document.getElementById("display_fastening_down").checked = false;
+
+     document.getElementById("micro_yes").checked = false;
+     document.getElementById("micro_ability").checked = false;
+     document.getElementById("micro_no").checked = false;
+
+     document.getElementById("protect_simple").checked = false;
+     document.getElementById("protect_dust").checked = false;
+     document.getElementById("protect_metal").checked = false;
+     document.getElementById("protect_underwater").checked = false;
+
+     document.getElementById("power_acum").checked = false;
+     document.getElementById("power_aa").checked = false;
+
+     document.getElementById("macro_no").checked = false;
+     document.getElementById("macro_yes").checked = false;
+
+     document.getElementById("stable_el").checked = false;
+     document.getElementById("stable_mx").checked = false;
+     document.getElementById("stable_op").checked = false;
+     document.getElementById("stable_no").checked = false;
+
+     document.getElementById("raw_yes").checked = false;
+     document.getElementById("raw_no").checked = false;
+
+     document.getElementById("sound_sterio").checked = false;
+     document.getElementById("sound_no").checked = false;
+    document.getElementById("sound_mono").checked = false;
+
+     document.getElementById("sensordisplay_yes").checked = false;
+     document.getElementById("sensordisplay_no").checked = false;
+
+     document.getElementById("expo_man").checked = false;
+     document.getElementById("expo_auto").checked = false;
+
+     document.getElementById("displaysize_25").checked = false;
+     document.getElementById("displaysize_3Up").checked = false;
+    document.getElementById("displaysize_3").checked = false;
+    filtering()
+   }
+
    function filtering(){
+
+    
+
     setFilter({
       system_wom: document.getElementById("system_wom").checked,
       system_wm: document.getElementById("system_wm").checked,
@@ -691,6 +795,7 @@ const FilterList = ({ filter, setFilter }) => {
                     
             </ul>
             <button className='MainPage_Filter_Button' onClick={filtering}>ФІЛЬТРУВАТИ</button>
+            <button className='MainPage_Filter_Reset_Button' onClick={resetFilter}>Збросити Фільтр</button>
     </div>
   );
 };

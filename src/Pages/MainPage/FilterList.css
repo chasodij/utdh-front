@@ -65,3 +65,13 @@ input[type = "checkbox"]{
     border: none;
     border-radius: 13px;
 }
+
+.MainPage_Filter_Reset_Button{
+    margin-bottom: 15px;
+    background-color: #a39b9b;
+    color: #F4F4F4;
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-radius: 13px;
+}

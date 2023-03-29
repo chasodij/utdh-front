@@ -112,27 +112,128 @@ const MainPage = ({ bucket, addToBucket, addToComparison }) => {
       const response = await FetchProducts();
       var data = await response.json();
      
-        console.log(filter1)
           data = data.filter(function(value, index, arr){ 
-            var system = !((filter1.system_wom && !value.systemNames.includes("Бездзеркальна")) || (filter1.system_wm && !value.systemNames.includes("Дзеркальна")) ||(filter1.system_c && !value.systemNames.includes("Компактна")) ||(filter1.system_qp && !value.systemNames.includes("Миттєвого друкування")));
-            var video = !((filter1.video_wo && value.resolution != "(-)")  || (filter1.video_vga && value.resolution != "(640x480)") || (filter1.video_uhd && value.resolution != "(3840x2160)") ||(filter1.video_hd && value.resolution != "(1280x720)") ||(filter1.video_fh169 && value.resolution != "(1920x1080)") ||(filter1.video_fh43 && value.resolution != "(1440x1080)") ||(filter1.video_6k && value.resolution != "(6000x3164)") ||(filter1.video_8k && value.resolution != "(7680x4320)") ||(filter1.video_4k && value.resolution != "(4096x2160)"));
-            var sensor = !((filter1.sensorSize_1 && !(value.sensorWidth = 2.54)) || (filter1.sensorSize_1_2 && !(value.sensorWidth < 2.54)) ||(filter1.sensorSize_13_1 && !(value.sensorWidth = 13.1)) ||(filter1.sensorSize_13_2 && !(value.sensorWidth = 13.2)) ||(filter1.sensorSize_18 && !(value.sensorWidth = 18.7)) ||(filter1.sensorSize_43 && !(value.sensorWidth = 17.3)) ||(filter1.sensorSize_asp && !(value.sensorWidth > 18.8 && value.sensorWidth < 35)) ||(filter1.sensorSize_ff && !(value.sensorWidth = 35)));
-            var optica = !( (filter1.optica_yes && !value.isOpticInComplect) || (filter1.optica_no && value.isOpticInComplect) );
-            var zoom = !( (filter1.Zoom_wo && value.maxZoomValue != 1) || (filter1.Zoom_36 && !(value.maxZoomValue <= 36 && value.maxZoomValue >= 20)) || (filter1.Zoom_20 && !(value.maxZoomValue <= 20 && value.maxZoomValue >= 6)) || (filter1.Zoom_6 && !(value.maxZoomValue < 6)) || (filter1.Zoom_36Up && !(value.maxZoomValue > 36)));
-            var intrface = !( (filter1.interface_mj && !value.interfaceNames.includes("3.5 mini-jack")) || (filter1.interface_av && !value.interfaceNames.includes("AV")) || (filter1.interface_bt && !value.interfaceNames.includes("Bluetooth"))|| (filter1.interface_gps && !value.interfaceNames.includes("GPS"))|| (filter1.interface_hdmi && !value.interfaceNames.includes("HDMI"))|| (filter1.interface_mc_usb && !value.interfaceNames.includes("Micro USB"))|| (filter1.interface_nfc && !value.interfaceNames.includes("NFC"))|| (filter1.interface_usb && !value.interfaceNames.includes("USB"))|| (filter1.interface_usb30 && !value.interfaceNames.includes("USB 3.0"))|| (filter1.interface_usb31 && !value.interfaceNames.includes("USB 3.1"))|| (filter1.interface_usb31c && !value.interfaceNames.includes("USB 3.1 Type-C"))|| (filter1.interface_usb32 && !value.interfaceNames.includes("USB 3.2"))|| (filter1.interface_usbc && !value.interfaceNames.includes("USB Type-C"))|| (filter1.interface_wf && !value.interfaceNames.includes("Wi-Fi"))|| (filter1.interface_mc_hdmi && !value.interfaceNames.includes("micro-HDMI"))|| (filter1.interface_mi_usb && !value.interfaceNames.includes("mini USB"))|| (filter1.interface_mi_hdmi && !value.interfaceNames.includes("mini-HDMI")));
-            var pixel = !( (filter1.px_16 && !(value.megaPixels >= 12.0 && value.megaPixels <= 16.0)) || (filter1.px_20 && !(value.megaPixels >= 16.0 && value.megaPixels <= 20.0)) || (filter1.px_20Up && !(value.megaPixels > 20.0)) || (filter1.px_12 && !(value.megaPixels < 12.0)) );
-            var displayfasten = !( (filter1.display_fastening_down && value.lcdMount != "Екран, шарнір знизу") || (filter1.display_fastening_spin && value.lcdMount != "Поворотний дисплей") || (filter1.display_fastening_nospin && value.lcdMount != "Фіксований дисплей"));
-            var micro = !( (filter1.micro_no && value.microphone != "Без мікрофону") || (filter1.micro_yes && value.microphone != "Вбудований мікрофон") || (filter1.micro_ability && value.microphone != "Роз'єм для зовнішнього мікрофона") );
-            var protect = !( (filter1.protect_simple && value.protection != "Звичайна") || (filter1.protect_underwater && value.protection != "Для підводної зйомки") || (filter1.protect_dust && value.protection != "Пиловологозахищений") || (filter1.protect_metal && value.protection != "Тонкий металевий корпус") );
-            var power =  !( (filter1.power_acum && value.supply != "Робота від акумулятора") || (filter1.power_aa && value.supply != "Робота від батарей АА"));
-            var macro = ! ( (filter1.macro_yes && !value.isMacroPhotography) || (filter1.macro_no && value.isMacroPhotography) );
-            var stable = !( (filter1.stable_no && value.stabilization != "Без стабілізації") || (filter1.stable_el && value.stabilization != "Електронна стабілізація") || (filter1.stable_mx && value.stabilization != "Стабілізація зрушенням матриці") ||(filter1.stable_op && value.stabilization != "Функція оптичної стабілізації") );
-            var raw = !( (filter1.raw_yes && !value.isRAWSupport) || (filter1.raw_no && value.isRAWSupport));
-            var sound = !( (filter1.sound_mono && value.soundFormat != "Вихід моно") || (filter1.sound_sterio && value.soundFormat != "Стерео") || (filter1.sound_no && value.soundFormat != "немає"));
-            var displaysensor= !( (filter1.sensordisplay_yes && !value.isSensorDisplay) || (filter1.sensordisplay_no && value.isSensorDisplay));
-            var expo = !( (filter1.expo_auto && value.expositionMode.indexOf("Авто") < 0) || (filter1.expo_man && value.expositionMode.indexOf("Ручн") < 0));
-            var displaysize = !( (filter1.displaysize_3 && !(parseFloat(value.lcdDiagonal.slice(0, -3).replace(".",",")) >= 6.35 && parseFloat(value.lcdDiagonal.slice(0, -3).replace('.',',')) <= 7.62)) || (filter1.displaysize_25 && !(parseFloat(value.lcdDiagonal.slice(0, -3).replace('.',','))  <= 6.35)) || (filter1.displaysize_3Up && !((parseFloat(value.lcdDiagonal.slice(0, -3).replace('.',',')) > 7.62))));
-           
+            var system = ((filter1.system_wom && value.systemNames.includes("Бездзеркальна")) || (filter1.system_wm && value.systemNames.includes("Дзеркальна")) ||(filter1.system_c && value.systemNames.includes("Компактна")) ||(filter1.system_qp && value.systemNames.includes("Миттєвого друкування")));
+            system = system || (!filter1.system_wom && !filter1.system_c && !filter1.system_qp && !filter1.system_wm)
+
+            var video = ((filter1.video_wo && value.resolution == "(-)")  || (filter1.video_vga && value.resolution == "(640x480)") || (filter1.video_uhd && value.resolution == "(3840x2160)") ||(filter1.video_hd && value.resolution == "(1280x720)") ||(filter1.video_fh169 && value.resolution == "(1920x1080)") ||(filter1.video_fh43 && value.resolution == "(1440x1080)") ||(filter1.video_6k && value.resolution == "(6000x3164)") ||(filter1.video_8k && value.resolution == "(7680x4320)") ||(filter1.video_4k && value.resolution == "(4096x2160)"));
+            video = video || (
+              !filter1.video_4k &&
+              !filter1.video_8k && 
+              !filter1.video_6k &&
+              !filter1.video_fh43 &&
+              !filter1.video_fh169 &&
+              !filter1.video_hd &&
+              !filter1.video_uhd &&
+              !filter1.video_vga &&
+              !filter1.video_wo
+            )
+            
+            var sensor = ((filter1.sensorSize_1 && (value.sensorWidth = 2.54)) || (filter1.sensorSize_1_2 && (value.sensorWidth < 2.54)) ||(filter1.sensorSize_13_1 && (value.sensorWidth = 13.1)) ||(filter1.sensorSize_13_2 && (value.sensorWidth = 13.2)) ||(filter1.sensorSize_18 && (value.sensorWidth = 18.7)) ||(filter1.sensorSize_43 && (value.sensorWidth = 17.3)) ||(filter1.sensorSize_asp && (value.sensorWidth > 18.8 && value.sensorWidth < 35)) ||(filter1.sensorSize_ff && (value.sensorWidth = 35)));
+            sensor = sensor || (
+              !filter1.sensorSize_1 &&
+              !filter1.sensorSize_1_2 &&
+              !filter1.sensorSize_131 &&
+              !filter1.sensorSize_132 &&
+              !filter1.sensorSize_18 &&
+              !filter1.sensorSize_43 &&
+              !filter1.sensorSize_asp &&
+              !filter1.sensorSize_FF
+            )
+            
+            var optica = ((filter1.optica_yes && value.isOpticInComplect) || (filter1.optica_no && value.isOpticInComplect) );
+            optica = optica || (
+              !filter1.optica_yes &&
+              !filter1.optica_no
+            )
+            
+            var zoom = ((filter1.Zoom_wo && value.maxZoomValue == 1) || (filter1.Zoom_36 && (value.maxZoomValue <= 36 && value.maxZoomValue >= 20)) || (filter1.Zoom_20 && (value.maxZoomValue <= 20 && value.maxZoomValue >= 6)) || (filter1.Zoom_6 && (value.maxZoomValue < 6)) || (filter1.Zoom_36Up && (value.maxZoomValue > 36)));
+            zoom = zoom || (
+              !filter1.Zoom_wo &&
+              !filter1.Zoom_36 &&
+              !filter1.Zoom_20 &&
+              !filter1.Zoom_6 &&
+              !filter1.Zoom_36Up
+            )
+            
+            var intrface = ((filter1.interface_mj && value.interfaceNames.includes("3.5 mini-jack")) || (filter1.interface_av && value.interfaceNames.includes("AV")) || (filter1.interface_bt && value.interfaceNames.includes("Bluetooth"))|| (filter1.interface_gps && value.interfaceNames.includes("GPS"))|| (filter1.interface_hdmi && value.interfaceNames.includes("HDMI"))|| (filter1.interface_mc_usb && value.interfaceNames.includes("Micro USB"))|| (filter1.interface_nfc && value.interfaceNames.includes("NFC"))|| (filter1.interface_usb && value.interfaceNames.includes("USB"))|| (filter1.interface_usb30 && value.interfaceNames.includes("USB 3.0"))|| (filter1.interface_usb31 && value.interfaceNames.includes("USB 3.1"))|| (filter1.interface_usb31c && value.interfaceNames.includes("USB 3.1 Type-C"))|| (filter1.interface_usb32 && value.interfaceNames.includes("USB 3.2"))|| (filter1.interface_usbc && value.interfaceNames.includes("USB Type-C"))|| (filter1.interface_wf && value.interfaceNames.includes("Wi-Fi"))|| (filter1.interface_mc_hdmi && value.interfaceNames.includes("micro-HDMI"))|| (filter1.interface_mi_usb && value.interfaceNames.includes("mini USB"))|| (filter1.interface_mi_hdmi && value.interfaceNames.includes("mini-HDMI")));
+            intrface = intrface || (    !filter1.interface_mj &&
+              !filter1.interface_av &&
+              !filter1.interface_bt &&
+              !filter1.interface_gps &&
+              !filter1.interface_hdmi &&
+              !filter1.interface_mc_usb &&
+              !filter1.interface_usb31 &&
+              !filter1.interface_usb31c &&
+              !filter1.interface_usb32 &&
+              !filter1.interface_usbc &&
+              !filter1.interface_wf &&
+              !filter1.interface_mc_hdmi &&
+              !filter1.interface_mi_usb &&
+              !filter1.interface_mi_hdmi &&
+              !filter1.interface_nfc &&
+              !filter1.interface_usb &&
+              !filter1.interface_usb30)
+            
+            var pixel = ((filter1.px_16 && (value.megaPixels >= 12.0 && value.megaPixels <= 16.0)) || (filter1.px_20 && (value.megaPixels >= 16.0 && value.megaPixels <= 20.0)) || (filter1.px_20Up && (value.megaPixels > 20.0)) || (filter1.px_12 && (value.megaPixels < 12.0)) );
+            pixel = pixel || (
+              !filter1.px_20 &&
+              !filter1.px_12 &&
+              !filter1.px_20Up &&
+              !filter1.px_16)
+            
+            var displayfasten = ((filter1.display_fastening_down && value.lcdMount == "Екран, шарнір знизу") || (filter1.display_fastening_spin && value.lcdMount == "Поворотний дисплей") || (filter1.display_fastening_nospin && value.lcdMount == "Фіксований дисплей"));
+            displayfasten = displayfasten || (
+              !filter1.display_fastening_spin &&
+              !filter1.display_fastening_nospin &&
+              !filter1.display_fastening_down)
+            
+            var micro = ((filter1.micro_no && value.microphone == "Без мікрофону") || (filter1.micro_yes && value.microphone == "Вбудований мікрофон") || (filter1.micro_ability && value.microphone == "Роз'єм для зовнішнього мікрофона") );
+            micro = micro || (  !filter1.micro_yes &&
+              !filter1.micro_ability &&
+              !filter1.micro_no)
+            
+            var protect = ((filter1.protect_simple && value.protection == "Звичайна") || (filter1.protect_underwater && value.protection == "Для підводної зйомки") || (filter1.protect_dust && value.protection == "Пиловологозахищений") || (filter1.protect_metal && value.protection == "Тонкий металевий корпус") );
+            protect = protect || (  !filter1.protect_simple &&
+              !filter1.protect_dust &&
+              !filter1.protect_metal &&
+              !filter1.protect_underwater)
+            
+            var power =  ((filter1.power_acum && value.supply == "Робота від акумулятора") || (filter1.power_aa && value.supply == "Робота від батарей АА"));
+            power = power || ( !filter1.power_acum &&
+              !filter1.power_aa)
+            
+            var macro =  ((filter1.macro_yes && value.isMacroPhotography) || (filter1.macro_no && !value.isMacroPhotography) );
+            macro = macro || ( !filter1.macro_no &&
+              !filter1.macro_yes)
+            
+            var stable = ((filter1.stable_no && value.stabilization == "Без стабілізації") || (filter1.stable_el && value.stabilization == "Електронна стабілізація") || (filter1.stable_mx && value.stabilization == "Стабілізація зрушенням матриці") ||(filter1.stable_op && value.stabilization == "Функція оптичної стабілізації") );
+            stable = stable || (    !filter1.stable_el &&
+              !filter1.stable_mx &&
+              !filter1.stable_op &&
+              !filter1.stable_no)
+            
+            var raw = ((filter1.raw_yes && value.isRAWSupport) || (filter1.raw_no && !value.isRAWSupport));
+            raw = raw || (   !filter1.raw_yes &&
+              !filter1.raw_no)
+            
+            var sound = ((filter1.sound_mono && value.soundFormat == "Вихід моно") || (filter1.sound_sterio && value.soundFormat == "Стерео") || (filter1.sound_no && value.soundFormat == "немає"));
+            sound = sound || (    !filter1.sound_sterio &&
+              !filter1.sound_no &&
+              !filter1.sound_mono)
+            
+            var displaysensor= ((filter1.sensordisplay_yes && value.isSensorDisplay) || (filter1.sensordisplay_no && value.isSensorDisplay));
+            displaysensor = displaysensor || (    !filter1.sensordisplay_yes &&
+              !filter1.sensordisplay_no)
+            
+            var expo = ((filter1.expo_auto && value.expositionMode.indexOf("Авто") > 0) || (filter1.expo_man && value.expositionMode.indexOf("Ручн") > 0));
+            expo = expo || ( !filter1.expo_man &&
+              !filter1.expo_auto)
+
+            var displaysize = ((filter1.displaysize_3 && (parseFloat(value.lcdDiagonal.slice(0, -3).replace(".",",")) >= 6.35 && parseFloat(value.lcdDiagonal.slice(0, -3).replace('.',',')) <= 7.62)) || (filter1.displaysize_25 && (parseFloat(value.lcdDiagonal.slice(0, -3).replace('.',','))  <= 6.35)) || (filter1.displaysize_3Up && ((parseFloat(value.lcdDiagonal.slice(0, -3).replace('.',',')) > 7.62))));
+            displaysize = displaysize || (  !filter1.displaysize_25 &&
+              !filter1.displaysize_3Up &&
+              !filter1.displaysize_3)
             return system && video && sensor && optica && zoom && intrface && pixel && displayfasten && micro && protect && power && macro && stable && raw && sound && displaysensor && expo && displaysize;
           });
           
