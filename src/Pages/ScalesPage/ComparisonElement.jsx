@@ -27,79 +27,79 @@ const convertSystemsToString = (systems) => {
     return (
         <div className={"comparison-camera-wrapper"}>
             <img className={"comparison-camera-image"} src={product.photo} alt=""/>
-            <div>{product.modelName}</div>
-            <div>{product.price}</div>
+            <div className={"elemnent-huy"}>{product.modelName}</div>
+            <div className={"elemnent-huy"}>{product.price}</div>
 
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.inStockCount}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.sensorWidth}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.sensorHeight}
             </div>
-            <div>
-                    {product.isOpticInComplect}
+            <div className={"elemnent-huy"}>
+                    {product.isOpticInComplect.toString()}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.megaPixels}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.lcdMount}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.microphone}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.protection}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.supply}
             </div>
-            <div>
-                    {product.isMacroPhotography}
+            <div className={"elemnent-huy"}>
+                    {product.isMacroPhotography.toString()}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.stabilization}
             </div>
-            <div>
-                    {product.isRAWSupport}
+            <div className={"elemnent-huy"}>
+                    {product.isRAWSupport.toString()}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.soundFormat}
             </div>
-            <div>
-                    {product.isSensorDisplay}
+            <div className={"elemnent-huy"}>
+                    {product.isSensorDisplay.toString()}
             </div>
-            <div>
+            <div className={"elemnent-big-huy"}>
                     {product.expositionMode}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.lcdDiagonal}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.maxZoomValue}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.manufacturer}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.modelName}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.country}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.resolutionName}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {product.resolution}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {convertInterfacesToString(product.interfaceNames)}
             </div>
-            <div>
+            <div className={"elemnent-huy"}>
                     {convertSystemsToString(product.systemNames)}
             </div>
         </div>
