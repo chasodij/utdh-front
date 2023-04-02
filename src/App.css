@@ -87,12 +87,21 @@ body > #root > div {
     margin: 2%;
     align-items: center;
 }
+.comparison-camera-names{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2%;
+    margin-top: calc(220px + 2%);
+    align-items: center;
+}
 .comparison-products-wrapper{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     margin-bottom: 2%;
 }
+
 .comparison-camera-image{
     width: 300px;
     height: 220px;
