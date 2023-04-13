@@ -121,3 +121,7 @@ body > #root > div {
     cursor: pointer;
 }
 
+.link-header:hover{
+    transform: scale(1.1);
+    transition: 0.7s all ease;
+}

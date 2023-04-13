@@ -23,7 +23,7 @@ const ProductCard = ({product, bucket, addToBucket, addToComparison}) => {
                 <Link className='product-more-button' to={`/product/${product.id}`}>
                     More
                 </Link>
-                <FontAwesomeIcon onClick={() => addToBucket(product)} className={'icon'}  icon={solid('bucket')} />
+                <FontAwesomeIcon onClick={() => addToBucket(product)} className={'icon'}  icon={solid('cart-shopping')} />
             </div>
         </div>
 

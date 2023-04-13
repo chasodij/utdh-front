@@ -47,6 +47,8 @@ function App() {
           <Route path="/comparison" element={<ScalePageVersion2 bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart} scales={scales}/>}/>
           <Route path="/product/:productId" element={<ProductPage bucket={bucket} addToComparison={addToComparison} addToBucket={addToCart} scales={scales}/>}/>
           <Route path="/checkout/*" element={<CheckoutPage/>}/>
+          <Route path="/choose" element={<div></div>}/>
+          <Route path="/cart" element={<div></div>}/>
         </Routes>
           <ToastContainer
               position="top-right"
