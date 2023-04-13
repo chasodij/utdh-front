@@ -14,6 +14,7 @@
     flex-direction: column;
     border-radius: 30px;
     border: 1px solid #ccc;
+    margin-bottom: 30px;
 }
 body > #root > div {
     height: 100vh;
@@ -110,3 +111,13 @@ body > #root > div {
     align-items: center;
     border-radius: 10px;
 }
+
+.logo-image{
+    margin-left: 100px;
+    width: 100px;
+    height: 100px;
+}
+.logo-image:hover{
+    cursor: pointer;
+}
+

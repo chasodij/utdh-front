@@ -5,9 +5,9 @@ const Header = () => {
     return (
         <div>
             <header className="MainPage_header">
-                <a className='MainPage_Icon'>
-                    Іконка
-                </a>
+                <Link to={'/'} className='MainPage_Icon'>
+                    <img className={"logo-image"} src={require("../Icons/logo.jpg")} alt=""/>
+                </Link>
                 <div className='MainPage_menu'>
                     <a className='MainPage_ChoiceHelper'>
                         Підібрати камеру
