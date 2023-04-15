@@ -14,11 +14,11 @@ export const BasketContextProvider = ({ children }) => {
   const [basketItems, setBasketItems] = useState({ items: [], total: 0.0 });
 
   useEffect(() => {
-    let items = JSON.parse(localStorage.getItem("basketItems"));
-    if (items) {
+    let data = JSON.parse(localStorage.getItem("basketItems"));
+    if (data) {
       setBasketItems({
-        items: items,
-        total: items.reduce((sum, a) => (sum += a)),
+        items: data.items,
+        total: data.total,
       });
     }
   }, []);
@@ -34,6 +34,7 @@ export const BasketContextProvider = ({ children }) => {
         foundItem.amount++;
       }
       newState.total += item.price;
+      localStorage.setItem("basketItems", JSON.stringify(newState))  
       return newState;
     });
   };
@@ -47,6 +48,7 @@ export const BasketContextProvider = ({ children }) => {
         item.amount = amount;
         newState.total += item.price * item.amount;
       }
+      localStorage.setItem("basketItems", JSON.stringify(newState))  
       return newState;
     });
   };
@@ -66,6 +68,7 @@ export const BasketContextProvider = ({ children }) => {
           }
         }
       }
+      localStorage.setItem("basketItems", JSON.stringify(newState))  
       return newState;
     });
   };
@@ -79,6 +82,7 @@ export const BasketContextProvider = ({ children }) => {
         newState.total -= item.price * item.amount;
         newState.items.splice(idx, 1);
       }
+      localStorage.setItem("basketItems", JSON.stringify(newState))  
       return newState;
     });
   };
