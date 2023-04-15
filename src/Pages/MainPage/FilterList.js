@@ -384,7 +384,7 @@ const FilterList = ({ filter, setFilter }) => {
                             <li className='MainPage_Filter_item_in'>
                                 <input type="checkbox" id="Zoom_wo" name="Zoom_wo">
                                 </input>
-                                <label for="Zoom_wo">Без маштабування</label>
+                                <label for="Zoom_wo">Без масштабування</label>
                             </li>
                             <li className='MainPage_Filter_item_in'>
                                 <input type="checkbox" id="Zoom_36" name="Zoom_36">
@@ -508,7 +508,7 @@ const FilterList = ({ filter, setFilter }) => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='6'>
                             <Accordion.Header>
-                            <p className='MainPage_Filter_item_name'>Кількість активних піесклів</p>
+                            <p className='MainPage_Filter_item_name'>Кількість активних пікселів</p>
                             </Accordion.Header>
                             <Accordion.Body>
                             <ul className='MainPage_Filter_list_in'>
@@ -628,7 +628,7 @@ const FilterList = ({ filter, setFilter }) => {
                             <li className='MainPage_Filter_item_in'>
                                 <label for="power_aa">
                                 <input type="checkbox" id="power_aa" name="power_aa">
-                                </input>Робота від батарей АА</label>
+                                </input>Робота від батарейок типу АА</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -636,7 +636,7 @@ const FilterList = ({ filter, setFilter }) => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='11'>
                             <Accordion.Header>
-                            <p className='MainPage_Filter_item_name'>Макроз'йомка</p>
+                            <p className='MainPage_Filter_item_name'>Макрозйомка</p>
                             </Accordion.Header>
                             <Accordion.Body>
                             <ul className='MainPage_Filter_list_in'>
@@ -693,12 +693,12 @@ const FilterList = ({ filter, setFilter }) => {
                             <li className='MainPage_Filter_item_in'>
                                 <label for="raw_no">
                                 <input type="checkbox" id="raw_no" name="raw_no">
-                                </input>Знімання тільки в JPEG</label>
+                                </input>Зйомка тільки в JPEG</label>
                             </li>
                             <li className='MainPage_Filter_item_in'>
                                 <label for="raw_yes">
                                 <input type="checkbox" id="raw_yes" name="raw_yes">
-                                </input>Знімання в RAW і JPEG</label>
+                                </input>Зйомка в RAW і JPEG</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -718,7 +718,7 @@ const FilterList = ({ filter, setFilter }) => {
                             <li className='MainPage_Filter_item_in'>
                                 <label for="sound_sterio">
                                 <input type="checkbox" id="sound_sterio" name="sound_sterio">
-                                </input>Вихід стеріо</label>
+                                </input>Вихід стерео</label>
                             </li>
                             <li className='MainPage_Filter_item_in'>
                                 <label for="sound_no">
@@ -743,7 +743,7 @@ const FilterList = ({ filter, setFilter }) => {
                             <li className='MainPage_Filter_item_in'>
                                 <label for="sensordisplay_yes">
                                 <input type="checkbox" id="sensordisplay_yes" name="sensordisplay_yes">
-                                </input>Із сенсорним управлінням</label>
+                                </input>Із сенсорним керуванням</label>
                             </li>
                             </ul>
                             </Accordion.Body>
@@ -769,7 +769,7 @@ const FilterList = ({ filter, setFilter }) => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='17'>
                             <Accordion.Header>
-                            <p className='MainPage_Filter_item_name'>Діоганаль диспею</p>
+                            <p className='MainPage_Filter_item_name'>Діагональ дисплею</p>
                             </Accordion.Header>
                             <Accordion.Body>
                             <ul className='MainPage_Filter_list_in'>
@@ -795,7 +795,7 @@ const FilterList = ({ filter, setFilter }) => {
                     
             </ul>
             <button className='MainPage_Filter_Button' onClick={filtering}>ФІЛЬТРУВАТИ</button>
-            <button className='MainPage_Filter_Reset_Button' onClick={resetFilter}>Збросити Фільтр</button>
+            <button className='MainPage_Filter_Reset_Button' onClick={resetFilter}>Скинути фільтр</button>
     </div>
   );
 };
