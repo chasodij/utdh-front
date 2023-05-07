@@ -8,9 +8,7 @@ import { BasketContextProvider } from "./Data/basket-context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BasketContextProvider>
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   </BasketContextProvider>
 );
 

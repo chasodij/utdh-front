@@ -1,7 +1,6 @@
 import React from 'react'
 import "./ScalesPage.css"
 import { useNavigate} from "react-router-dom";
-import Header from "../../components/Header";
 
 const ScalesPage = ({bucket, setBucket, scales, setScales}) => {
     var iter = 0;
@@ -23,7 +22,6 @@ const ScalesPage = ({bucket, setBucket, scales, setScales}) => {
   return (
     
     <div className='Scales_bg'>
-        <Header/>
         <div className='arrow_back_div'>
         <button onClick={() => navigate(-1)} className='zero_button'>
                     <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +222,7 @@ const ScalesPage = ({bucket, setBucket, scales, setScales}) => {
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
-                Кріплення РК-дісплея
+                Кріплення РК-дисплею
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds
@@ -280,7 +278,7 @@ const ScalesPage = ({bucket, setBucket, scales, setScales}) => {
             </tr>
             <tr>
                 <th className='Table_first_colum' name='Table_first_colum'>
-                Макроз'йомка
+                Макрозйомка
                 </th>
                 <th className='Table_value_colum' name='Table_value_colum'>
                     sdsds

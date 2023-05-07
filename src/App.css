@@ -16,9 +16,6 @@
     border: 1px solid #ccc;
     margin-bottom: 30px;
 }
-body > #root > div {
-    height: 100vh;
-  }
 .product-image-wrapper{
     width: 300px;
     height: 220px;

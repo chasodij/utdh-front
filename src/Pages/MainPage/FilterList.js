@@ -538,7 +538,7 @@ const FilterList = ({ filter, setFilter }) => {
                         <hr className='CastomHR'></hr>
                         <Accordion.Item eventKey='7'>
                             <Accordion.Header>
-                            <p className='MainPage_Filter_item_name'>Кріплення РК-дісплея</p>
+                            <p className='MainPage_Filter_item_name'>Кріплення РК-дисплею</p>
                             </Accordion.Header>
                             <Accordion.Body>
                             <ul className='MainPage_Filter_list_in'>

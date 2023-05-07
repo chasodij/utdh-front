@@ -3,8 +3,8 @@ import "./MainPage.css";
 import FilterList from "./FilterList";
 import ProductsList from "./ProductsList";
 import { FetchProducts } from "../../Data/Fetch";
-import Header from "../../components/Header";
 import Basket from "../Basket/Basket";
+import CameraChooser from "../CameraChooser/CameraChooser";
 
 const MainPage = ({ bucket, addToBucket, addToComparison }) => {
   const [products, setProducts] = useState([]);
@@ -106,7 +106,6 @@ const MainPage = ({ bucket, addToBucket, addToComparison }) => {
     displaysize_3Up: false,
     displaysize_3: false,
   });
-  const [isBasketShown, setIsBasketShown] = useState(false);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -244,19 +243,9 @@ const MainPage = ({ bucket, addToBucket, addToComparison }) => {
     };
     getProducts();
   }, [filter1]);
-
-  const showBasketHandler = () => {
-    setIsBasketShown(true);
-  }
-
-  const hideBasketHandler = () => {
-    setIsBasketShown(false);
-  }
-
+  
   return (
     <div className="MainPage">
-      {isBasketShown && <Basket hideBasket={hideBasketHandler} />}
-      <Header showBasket={showBasketHandler} />
       <body className="MainPage_body">
         <div className="MainPage_Filter">
           <p className="MainPage_Filter_text">Фільтри</p>

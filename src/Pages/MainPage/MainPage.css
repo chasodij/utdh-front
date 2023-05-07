@@ -3,13 +3,15 @@
 }
 
 .MainPage_header {
-    background-color: #FFFFFF;
+    background-color: white;
     display: flex;
     justify-content: space-between;
-    
+    position: fixed;
     align-items: center;
     height: 100px;
     width: 100%;
+    top: 0;
+    z-index: 300;
 }
 .MainPage_menu{
     display: flex;

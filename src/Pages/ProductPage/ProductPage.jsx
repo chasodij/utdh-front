@@ -3,7 +3,6 @@ import {useParams} from "react-router";
 import {FetchProduct} from "../../Data/Fetch";
 import "./ProductPage.css"
 import { useNavigate} from "react-router-dom";
-import Header from "../../components/Header";
 
 const ProductPage = ({bucket, addToComparison, scales, addToBucket}) => {
 
@@ -50,7 +49,6 @@ const ProductPage = ({bucket, addToComparison, scales, addToBucket}) => {
 
     return (
     <div className='MainPage'>
-        <Header/>
         <body className="MainPage_body">
         <div>
         <button onClick={() => navigate(-1)} className='arrow_button'>
@@ -152,7 +150,7 @@ const ProductPage = ({bucket, addToComparison, scales, addToBucket}) => {
            </tr>
            <tr>
                <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
-               Кріплення РК-дісплея
+               Кріплення РК-дисплею
                </th>
               <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
                   {product?.lcdMount}
@@ -184,7 +182,7 @@ const ProductPage = ({bucket, addToComparison, scales, addToBucket}) => {
            </tr>
            <tr>
                <th className='Table_cr_first_colum' name='Table_cr_first_colum'>
-               Макроз'йомка
+               Макрозйомка
                </th>
               <th className='Table_cr_value_colum' name='Table_cr_value_colum'>
                   {product?.isMacroPhotography.toString()}
