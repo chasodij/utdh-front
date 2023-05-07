@@ -35,7 +35,7 @@ const Basket = (props) => {
                 <Link
                   className="btn btn-dark"
                   to="/checkout"
-                  //onClick={props.onClose}
+                  onClick={props.hideBasket}
                 >
                   Оформити замовлення
                 </Link>
