@@ -21,9 +21,9 @@ const BasketTable = () => {
         onClick={() => {
           basketCtx.addItem({
             id: 352,
-            title: "camera",
+            modelName: "camera",
             price: 123.0,
-            image:
+            photo:
               "https://fujifilm-x.com/wp-content/uploads/2020/02/x100v_thum.jpg",
           });
         }}
@@ -39,9 +39,9 @@ const BasketTable = () => {
               onClick={() => {
                 basketCtx.addItem({
                   id: 352,
-                  title: "camera",
+                  modelName: "camera",
                   price: 123.0,
-                  image:
+                  photo:
                     "https://fujifilm-x.com/wp-content/uploads/2020/02/x100v_thum.jpg",
                 });
               }}
@@ -57,10 +57,10 @@ const BasketTable = () => {
           <tr className="table-row" key={item.id}>
             <td>
               <div className="basket-pic">
-                <img src={item.image} alt="pic" />
+                <img src={item.photo} alt="pic" />
               </div>
             </td>
-            <td>{item.title}</td>
+            <td>{item.modelName}</td>
             <td>
               <Counter
                 amount={item.amount}
