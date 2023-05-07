@@ -1,4 +1,7 @@
 .checkout-sticky{
     top: 105px;
     height: max-content;
-  }
+}
+.checkout-page {
+    background-color: #f0e9e3;
+}
