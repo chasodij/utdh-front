@@ -11,6 +11,7 @@ import EmailInput from "../../UI/EmailInput";
 import { encode as base64_encode } from "base-64";
 import sha1 from "sha1";
 import { Buffer } from "buffer";
+import { toast, ToastContainer } from "react-toastify";
 var hexToBinary = require("hex-to-binary");
 
 const CheckoutPage = () => {
@@ -46,33 +47,49 @@ const CheckoutPage = () => {
       return;
     }
 
-    // fetch("https://localhost:7275/orders", {
-    //   method: "POST",
-    //   mode: "cors",
-    //   headers: {
-    //     'Accept': 'application/json, text/plain, */*',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({
-    //     customerSurname: surname,
-    //     customerName: name,
-    //     customerPatronymic: patronymic,
-    //     customerPhone: phone,
-    //     customerEmail: email,
-    //     customerAddress: city.value,
-    //     customerPostOffice: warehouse.value,
-    //     cartItems: basketCtx.basketItems.map((x) => {
-    //       return {
-    //         amount: x.amount,
-    //         cameraId: x.id,
-    //       };
-    //     }),
-    //   }),
-    // })
-    //   .then((response) => response.json())
-    //   .then((resp) => {
-    //     try {
-    let resp = { id: 1512521 };
+    let orderId;
+    let response = await fetch("https://localhost:7275/orders", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        customerSurname: surname,
+        customerName: name,
+        customerPatronymic: patronymic,
+        customerPhone: phone,
+        customerEmail: email,
+        customerAddress: city.value,
+        customerPostOffice: warehouse.value,
+        cartItems: basketCtx.basketItems.map((x) => {
+          return {
+            amount: x.amount,
+            cameraId: x.id,
+          };
+        }),
+      }),
+    });
+    if (response.status != 200) {
+      const notify = () => toast.error('Server fetching error occurred.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      notify();
+      return;
+    };
+    response.json()
+      .then(order => {
+        orderId = order.id
+      })
+
     basketCtx.clear();
 
     const data = {
@@ -81,8 +98,8 @@ const CheckoutPage = () => {
       action: "pay",
       amount: basketCtx.total,
       currency: "UAH",
-      description: "Замовлення №" + resp.id,
-      order_id: resp.id,
+      description: "Замовлення №" + orderId,
+      order_id: orderId,
       server_url: "https://localhost:7275/orders/payment",
       result_url: "localhost:3000/checkout/success"
     };
