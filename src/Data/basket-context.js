@@ -8,6 +8,7 @@ const BasketContext = React.createContext({
   incrementItemAmount: (id) => {},
   decrementItemAmount: (id) => {},
   deleteItem: (id) => {},
+  clear: () => {}
 });
 
 export const BasketContextProvider = ({ children }) => {
@@ -87,6 +88,10 @@ export const BasketContextProvider = ({ children }) => {
     });
   };
 
+  const clearHandler = () => {
+    setBasketItems({ items: [], total: 0.0 })
+  }
+
   return (
     <BasketContext.Provider
       value={{
@@ -97,6 +102,7 @@ export const BasketContextProvider = ({ children }) => {
         incrementItemAmount: (id) => changeItemAmountByOneHandler(id, true),
         decrementItemAmount: (id) => changeItemAmountByOneHandler(id, false),
         deleteItem: deleteItemHandler,
+        clear: clearHandler
       }}
     >
       {children}
