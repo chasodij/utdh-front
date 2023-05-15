@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87b1b850-b136-411c-a58c-bf66d7063075" name="Changes" comment="" />
+    <list default="true" id="87b1b850-b136-411c-a58c-bf66d7063075" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Basket/BasketTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Basket/BasketTable.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1683474940246</updated>
       <workItem from="1683474941637" duration="9016000" />
-      <workItem from="1683708683777" duration="7961000" />
+      <workItem from="1683708683777" duration="8565000" />
+      <workItem from="1684138612753" duration="2008000" />
     </task>
     <servers />
   </component>
@@ -103,7 +107,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Pages/CheckoutPage/CheckoutPage.jsx</url>
           <line>42</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

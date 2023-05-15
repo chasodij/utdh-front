@@ -16,36 +16,36 @@ const BasketTable = () => {
   return basketCtx.basketItems.length === 0 ? (
     <div>
       Тут поки-що пусто
-      <input
-        type="button"
-        onClick={() => {
-          basketCtx.addItem({
-            id: 352,
-            modelName: "camera",
-            price: 123.0,
-            photo:
-              "https://fujifilm-x.com/wp-content/uploads/2020/02/x100v_thum.jpg",
-          });
-        }}
-      />
+      {/*<input*/}
+      {/*  type="button"*/}
+      {/*  onClick={() => {*/}
+      {/*    basketCtx.addItem({*/}
+      {/*      id: 352,*/}
+      {/*      modelName: "camera",*/}
+      {/*      price: 123.0,*/}
+      {/*      photo:*/}
+      {/*        "https://fujifilm-x.com/wp-content/uploads/2020/02/x100v_thum.jpg",*/}
+      {/*    });*/}
+      {/*  }}*/}
+      {/*/>*/}
     </div>
   ) : (
     <table className="table align-middle text-center">
       <thead>
         <tr>
           <th scope="col">
-            <input
-              type="button"
-              onClick={() => {
-                basketCtx.addItem({
-                  id: 352,
-                  modelName: "camera",
-                  price: 123.0,
-                  photo:
-                    "https://fujifilm-x.com/wp-content/uploads/2020/02/x100v_thum.jpg",
-                });
-              }}
-            />
+            {/*<input*/}
+            {/*  type="button"*/}
+            {/*  onClick={() => {*/}
+            {/*    basketCtx.addItem({*/}
+            {/*      id: 352,*/}
+            {/*      modelName: "camera",*/}
+            {/*      price: 123.0,*/}
+            {/*      photo:*/}
+            {/*        "https://fujifilm-x.com/wp-content/uploads/2020/02/x100v_thum.jpg",*/}
+            {/*    });*/}
+            {/*  }}*/}
+            {/*/>*/}
           </th>
           <th scope="col"></th>
           <th scope="col">Кількість</th>
